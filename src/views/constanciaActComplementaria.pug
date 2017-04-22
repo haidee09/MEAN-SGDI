@@ -1,0 +1,67 @@
+extends layout
+block estilo
+  link(rel="stylesheet" type='text/css' href="/stylesheets/styleUsuario.css")
+  link(rel="stylesheet" type='text/css' href="/stylesheets/styleFormularios.css")
+block content
+  div.row.container
+    div.card-panel.indigo.lighten-5.z-depth-5
+      form
+        h5.center.flow-text Constancia de Cumplimiento de Actividad Complementaria
+        div.row
+          div.input-field.col.l6.s12
+            i.material-icons.prefix contacts
+            input.validate(type="text")
+            label(for="txtJefeDepartamento") Jefe del departamento
+          div.input-field.col.l6.s12
+            i.material-icons.prefix business
+            input.validate(type="text")
+            label(for="txtDepartamento") Departamento
+          div.input-field.col.l6.s12
+            i.material-icons.prefix person
+            input.validate(type="text")
+            label(for="txtNombreAlumno") Nombre de alumno
+          div.input-field.col.l6.s12
+            i.material-icons.prefix fingerprint
+            input.validate(type="text")
+            label(for="txtNumeroControl") Numero de control
+          div.input-field.col.l6.s12
+            i.material-icons.prefix local_library
+            input.validate(type="text")
+            label(for="txtCarrera") Carrera
+          div.input-field.col.l6.s12
+            i.material-icons.prefix extension
+            input.validate(type="text")
+            label(for="txtActividadComplementaria") Actividad Complementaria
+          div.input-field.col.l6.s12
+            i.material-icons.prefix equalizer
+            input.validate(type="text")
+            label(for="txtNivelDesempeno") Nivel de desempeño
+          div.input-field.col.l6.s12
+            i.material-icons.prefix playlist_add
+            input.validate(type="text")
+            label(for="txtValorNumerico") Valor numérico
+          div.input-field.col.l6.s12
+            i.material-icons.prefix book
+            input.validate(type="text")
+            label(for="txtValorCurricular") Valor curricular
+          div.input-field.col.l6.s12
+            i.material-icons.prefix today
+            input.datepicker(type="date")
+            label(for="txtFecha") Fecha
+        div.row.hide-on-med-and-down
+          div.input-field.right-align.col.l12
+            button.btn.waves-effect.green.darken-4(type="submit" name="action") Cancelar
+              i.material-icons.right reply
+            button.btn.waves-effect.green.darken-3(type="submit" name="action") Generar PDF
+              i.material-icons.right note_add
+        div.row.hide-on-large-only
+          div.input-field.right-align.fixed-action-btn.horizontal
+            a.btn-floating.btn-large.green.darken-1
+              i.large.material-icons done_all
+            ul
+              li
+                a.btn-floating.deep-orange.lighten-1yellow.darken-1
+                  i.material-icons reply
+              li
+                a.btn-floating.orange.darken-1
+                  i.material-icons note_add

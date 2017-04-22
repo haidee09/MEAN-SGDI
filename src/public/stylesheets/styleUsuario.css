@@ -1,0 +1,48 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+a {
+  color: #00B7FF;
+}
+#h1 {
+  padding-top: 20px;
+}
+
+  /* label focus color */
+  .input-field input[type=password]:focus + label {
+    color: #B57F50;
+  }
+  .input-field input[type=text]:focus+label {
+    color: #B57F50;
+  }
+  /* label underline focus color */
+  .input-field input[type=password]:focus {
+    border-bottom: 1px solid #B57F50;
+    box-shadow: 0 1px 0 0 #B57F50;
+  }
+  .input-field input[type=text]:focus  {
+      border-bottom: 1px solid #B57F50;
+      box-shadow: 0 1px 0 0 #B57F50;
+  }
+
+  i.icon-brown{
+    color: green;
+  }
+  .input-field .prefix.active {
+      color: #B57F50;
+  }
+
+
+  #titulo1{
+    font-weight: bold;
+  }
+  #navegacion{
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  #boton-ingresar{
+    background-color: #B57F50;
+  }
+  #mobile-demo{
+    height: 70%;
+  }

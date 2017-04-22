@@ -1,0 +1,153 @@
+extends layout
+block estilo
+  link(rel="stylesheet" type='text/css' href="/stylesheets/styleUsuario.css")
+  link(rel="stylesheet" type='text/css' href="/stylesheets/styleFormularios.css")
+block content
+  div.row.l12
+    div.card-panel.indigo.lighten-5.z-depth-5
+      form
+        h5.center.flow-text Constancia de Liberación de Actividades Frente a Grupo
+        div.row
+          div.input-field.col.l6.s12
+            label(for="txtFecha") Fecha
+        div.row
+          div.input-field.col.l6.s12
+            i.material-icons.prefix today
+            input.datepicker#txtFecha(type="date")
+          div.input-field.col.l6.s12
+            i.material-icons.prefix contacts
+            input.validate#txtDepartamento(type="text", placeholder="Centro de Cómputo")
+            label(for="txtDepartamento") Departamento de
+          div.input-field.col.s12
+            i.material-icons.prefix person
+            input.validate#txtNombreSolicitante(type="text")
+            label(for="txtNombreSolicitante") Nombre del Docente
+          div.row
+            div.col.s12.m11.l12
+              table.responsive-table.bordered
+                thead
+                  tr
+                    th(data-field="id") No.
+                    th(data-field="actividades") Actividades
+                    th(data-field="si") SI
+                    th(data-field="no") NO
+                    th(data-field="na") N/A
+                tbody
+                  tr
+                    td 1
+                    td La elaboración y entrega de la dosificación de la planeación del curso y avance programático de las materias impartidas
+                    td
+                      input.with-gap#planeacionCursoSI(name="planeacionCurso", type="radio")
+                      label(for="planeacionCursoSI")
+                    td
+                      input.with-gap#planeacionCursoNO(name="planeacionCurso", type="radio")
+                      label(for="planeacionCursoNO")
+                    td
+                      input.with-gap#planeacionCursoNA(name="planeacionCurso", type="radio")
+                      label(for="planeacionCursoNA")
+                  tr
+                    td 2
+                    td La elaboración y entrega de la instrumentación didáctica
+                    td
+                      input.with-gap#instrumentacionDidacticaSI(name="instrumentacionDidactica", type="radio")
+                      label(for="instrumentacionDidacticaSI")
+                    td
+                      input.with-gap#instrumentacionDidacticaNO(name="instrumentacionDidactica",type="radio")
+                      label(for="instrumentacionDidacticaNO")
+                    td
+                      input.with-gap#instrumentacionDidacticaNA(name="instrumentacionDidactica",type="radio")
+                      label(for="instrumentacionDidacticaNA")
+                  tr
+                    td 3
+                    td El 100% del contenido de los programas de estudio
+                    td
+                      input.with-gap#progEstudioSI(name="progEstudio", type="radio")
+                      label(for="progEstudioSI")
+                    td
+                      input.with-gap#progEstudioNO(name="progEstudio",type="radio")
+                      label(for="progEstudioNO")
+                    td
+                      input.with-gap#progEstudioNA(name="progEstudio", type="radio")
+                      label(for="progEstudioNA")
+                  tr
+                    td 4
+                    td La entrega en tiempo y forma de calificaciones parciales y finales
+                    td
+                      input.with-gap#califTiempoFormaSI(name="califTiempoForma",type="radio")
+                      label(for="califTiempoFormaSI")
+                    td
+                      input.with-gap#califTiempoFormaNO(name="califTiempoForma",type="radio")
+                      label(for="califTiempoFormaNO")
+                    td
+                      input.with-gap#califTiempoFormaNA(name="califTiempoForma",type="radio")
+                      label(for="califTiempoFormaNA")
+                  tr
+                    td 5
+                    td La entrega en tiempo y forma del reporte final
+                    td
+                      input.with-gap#reporteTiempoFormaSI(name="reporteTiempoForma",type="radio")
+                      label(for="reporteTiempoFormaSI")
+                    td
+                      input.with-gap#reporteTiempoFormaNO(name="reporteTiempoForma",type="radio")
+                      label(for="reporteTiempoFormaNO")
+                    td
+                      input.with-gap#reporteTiempoFormaNA(name="reporteTiempoForma",type="radio")
+                      label(for="reporteTiempoFormaNA")
+                  tr
+                    td 6
+                    td La entrega del informe de los proyectos individuales / Horas de apoyo a la docencia del programa de trabajo académico realizados en horas de apoyo a la docencia. (Cumplimiento de las actividades declaradas como apoyo a la docencia en el formato)
+                    td
+                      input.with-gap#informeProyIndSI(name="informeProyInd",type="radio")
+                      label(for="informeProyIndSI")
+                    td
+                      input.with-gap#informeProyIndNO(name="informeProyInd",type="radio")
+                      label(for="informeProyIndNO")
+                    td
+                      input.with-gap#informeProyIndNA(name="informeProyInd",type="radio")
+                      label(for="informeProyIndNA")
+                  tr
+                    td 7
+                    td Entrega de índices de reprobación y deserción mensuales y finales.
+                    td
+                      input.with-gap#entregaIndicesRepSI(name="entregaIndicesRep",type="radio")
+                      label(for="entregaIndicesRepSI")
+                    td
+                      input.with-gap#entregaIndicesRepNO(name="entregaIndicesRep",type="radio")
+                      label(for="entregaIndicesRepNO")
+                    td
+                      input.with-gap#entregaIndicesRepNA(name="entregaIndicesRep",type="radio")
+                      label(for="entregaIndicesRepNA")
+                  tr
+                    td
+                    td Se otorga liberación de actividades
+                    td
+                      input.with-gap#liberacionActividadesSI(name="liberacionActividades",type="radio")
+                      label(for="liberacionActividadesSI")
+                    td
+                      input.with-gap#liberacionActividadesNO(name="liberacionActividades",type="radio")
+                      label(for="liberacionActividadesNO")
+          div.input-field.col.s12
+            i.material-icons.prefix account_box
+            input.validate(type="text")
+            label(for="txtFirmaLiberacion1") Nombre y Firma del Jefe del Departamento
+          div.input-field.col.s12
+            i.material-icons.prefix supervisor_account
+            input.validate(type="text")
+            label(for="txtFirmaLiberacion1") Nombre y Firma del Subdirector Académico
+        div.row.hide-on-med-and-down
+          div.input-field.right-align.col.l12
+            button.btn.waves-effect.green.darken-4(type="submit" name="action") Cancelar
+              i.material-icons.right reply
+            button.btn.waves-effect.green.darken-3(type="submit" name="action") Generar PDF
+              i.material-icons.right note_add
+        div.row.hide-on-large-only
+          div.input-field.right-align.fixed-action-btn.horizontal
+            a.btn-floating.btn-large.green.darken-1
+              i.large.material-icons done_all
+            ul
+              li
+                a.btn-floating.deep-orange.lighten-1yellow.darken-1
+                  i.material-icons reply
+              li
+                a.btn-floating.orange.darken-1
+                  i.material-icons note_add

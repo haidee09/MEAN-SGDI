@@ -1,0 +1,150 @@
+extends layout
+block estilo
+  link(rel="stylesheet" type='text/css' href="/stylesheets/styleUsuario.css")
+  link(rel="stylesheet" type='text/css' href="/stylesheets/styleFormularios.css")
+block content
+  div.card-panel.indigo.lighten-5.z-depth-5
+    form.col.s12
+      h5.center.flow-text Solicitud de Visitas a Empresas
+      div.row
+        div.input-field.col.l6.s12
+          i.material-icons.prefix today
+          input.datepicker(type="date")
+          label(for="txtTipoPrograma") Fecha de evaluación
+        div.input-field.col.l6.s11
+          i.material-icons.prefix date_range
+          input.validate(type="text")
+          label(for="txtPeriodo") Periodo escolar
+
+      div.row
+        div.col.s12.m11.l12.input-field
+          table.responsive-table.bordered
+            thead
+              tr
+                th(data-field="numero") No.
+                th(data-field="empresa-ciudad") Empresa / Ciudad
+                th(data-field="area") Área a observar y objetivo
+                th(data-field="fecha-turno") Fecha / Turno
+                th(data-field="carrera") Carrera
+                th(data-field="numAlumnos") No. de alumnos
+                th(data-field="solicitante") Solicitante
+                th(data-field="asignatura") Asignatura
+            tbody
+              tr
+                td
+                  input.validate(type="number")
+                td
+                  input.validate(type="text")
+                td
+                  input.validate(type="text")
+                td
+                  input.validate(type="text")
+                td
+                  input.validate(type="text")
+                td
+                  input.validate(type="number", maxlength="50", minlenght="0")
+                td
+                  input.validate(type="text")
+                td
+                  input.validate(type="text")
+              tr
+                td
+                  input.validate(type="number")
+                td
+                  input.validate(type="text")
+                td
+                  input.validate(type="text")
+                td
+                  input.validate(type="text")
+                td
+                  input.validate(type="text")
+                td
+                  input.validate(type="number", maxlength="50", minlenght="0")
+                td
+                  input.validate(type="text")
+                td
+                  input.validate(type="text")
+              tr
+                td
+                  input.validate(type="number")
+                td
+                  input.validate(type="text")
+                td
+                  input.validate(type="text")
+                td
+                  input.validate(type="text")
+                td
+                  input.validate(type="text")
+                td
+                  input.validate(type="number", maxlength="50", minlenght="0")
+                td
+                  input.validate(type="text")
+                td
+                  input.validate(type="text")
+              tr
+                td
+                  input.validate(type="number")
+                td
+                  input.validate(type="text")
+                td
+                  input.validate(type="text")
+                td
+                  input.validate(type="text")
+                td
+                  input.validate(type="text")
+                td
+                  input.validate(type="number", maxlength="50", minlenght="0")
+                td
+                  input.validate(type="text")
+                td
+                  input.validate(type="text")
+              tr
+                td
+                  input.validate(type="number")
+                td
+                  input.validate(type="text")
+                td
+                  input.validate(type="text")
+                td
+                  input.validate(type="text")
+                td
+                  input.validate(type="text")
+                td
+                  input.validate(type="number", maxlength="50", minlenght="0")
+                td
+                  input.validate(type="text")
+                td
+                  input.validate(type="text")
+
+      div#boton-agregar.right-align
+        a.btn-floating.btn-large.waves-effect.waves-light.green.darken-4
+          i.material-icons add
+
+      div.row
+        div.input-field.col.l6.s12
+          i.material-icons.prefix person
+          input.validate(type="text")
+          label(for="txtJefeDepto") Nombre Jefe Depto. de Sistemas
+
+      div.input-field.col.l6.s12
+        i.material-icons.prefix person
+        input.validate(type="text")
+        label(for="txtSubAcademico") Nombre Subdirector Académico
+
+      div.row.hide-on-med-and-down
+        div.input-field.right-align.col.l12
+          button.btn.waves-effect.green.darken-4(type="submit" name="action") Cancelar
+            i.material-icons.right reply
+          button.btn.waves-effect.green.darken-3(type="submit" name="action") Generar PDF
+            i.material-icons.right note_add
+      div.row.hide-on-large-only
+        div.input-field.right-align.fixed-action-btn.horizontal
+          a.btn-floating.btn-large.green.darken-1
+            i.large.material-icons done_all
+          ul
+            li
+              a.btn-floating.deep-orange.lighten-1yellow.darken-1
+                i.material-icons reply
+            li
+              a.btn-floating.orange.darken-1
+                i.material-icons note_add

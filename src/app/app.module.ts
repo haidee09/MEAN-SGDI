@@ -4,7 +4,13 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
+import { AuthService } from './auth.service';
 
+import { LoginModule } from './login/login.module';
+import { RegisterModule} from './register/register.module';
+/*Tendremos que añadir los componentes al atributo declarations de @NgModule
+para poder utilizar las directivas que genera cada componente*/
 @NgModule({
   declarations: [
     AppComponent
@@ -12,9 +18,15 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    AppRoutingModule,
+    LoginModule,
+    RegisterModule
   ],
-  providers: [],
+  exports:[
+    AppComponent,
+  ],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

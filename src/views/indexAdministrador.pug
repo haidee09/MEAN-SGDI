@@ -1,0 +1,104 @@
+extends layout
+block estilo
+  link(rel="stylesheet" type='text/css' href="/stylesheets/styleAdministrador.css")
+block barraNav
+  section#mainContainer
+      nav.green.darken-2.col.l12
+          ul#dropdown1.dropdown-content
+              li.lime.lighten-4
+                  a.brown-text.text-lighten-1(href="#!") Residencias Profesionales
+              li.lime.lighten-4.divider
+                  a.brown-text.text-lighten-1(href="#!") Titulación
+              li.lime.lighten-4
+                  a.brown-text.text-lighten-1(href="#!") Servicio Social
+              li.lime.lighten-4
+                  a.brown-text.text-lighten-1(href="#!") Actividades Complementarias
+              li.lime.lighten-4
+                  a.brown-text.text-lighten-1(href="#!") Oficios
+              li.lime.lighten-4
+                  a.brown-text.text-lighten-1(href="#!") Otros
+          div.nav-wrapper.container
+              a.brand-logo(href='#')
+                  h5 Administrador
+              ul#nav-mobile.right.hide-on-med-and-down
+                  li.active
+                      a(href='/administrador') Inicio
+                        i.material-icons.left home
+                  li
+                      a.dropdown-button(href="/administrador/generarDocumentos") Generar Documentos
+                        i.material-icons.left  mode_edit
+                        <!--i.material-icons.right  arrow_drop_down-->
+                  li
+                      a(href='#') Cerrar Sesión
+                        i.material-icons.left  lock
+              ul#mobile-demo.side-nav.lime.lighten-4
+                  li.active
+                      a.waves-effect(href='/administrador') Inicio
+                        i.material-icons.left home
+                  li
+                      a.waves-effect(href='/administrador/generarDocumentos') Generar Documentos
+                        i.material-icons.left  mode_edit
+                        <!--i.material-icons.right  arrow_drop_down-->
+                  li
+                      a.waves-effect(href='#') Cerrar Sesión
+                        i.material-icons.left  lock
+              a.button-collapse(href="#" data-activates="mobile-demo")
+                  i.material-icons menu
+block content
+  div.row
+    nav.col.l5.m5.s10.offset-l6.offset-m6.offset-s1.brown.z-depth-5
+      div.class.nav-wrapper
+        form
+          div.input-field
+            input#search(type="search" placeholder="Clave documento" required)
+            label.label-icon(for="search")
+              i.material-icons search
+            i.material-icons close
+  div.row
+    div.col.l3.m4.hide-on-small-only
+      div.collection.z-depth-1.hoverable
+        a.collection-item.white-text.active.teal.darken-4.waves-effect.waves-green(href="#") Residencias Profesionales
+        a.collection-item.green-text.text-darken-4.waves-effect.waves-green(href="#") Titulación
+        a.collection-item.green-text.text-darken-4.waves-effect.waves-green(href="#") Servicio Social
+        a.collection-item.green-text.text-darken-4.waves-effect.waves-green(href="#") Actividades Complementarias
+        a.collection-item.green-text.text-darken-4.waves-effect.waves-green(href="#") Oficios
+        a.collection-item.green-text.text-darken-4.waves-effect.waves-green(href="#") Otros
+      div
+        blockquote
+          p.flow-text.teal-text.text-darken-4 Calendario
+        div.input-field.col.l12
+            i.material-icons.prefix today
+            input.datepicker(type="date" placeholder="Ingresa la fecha de búsqueda")
+
+    div.col.l9.m8.s12
+      div.col.l12.m12.s12.lime.lighten-3
+        p.center MUESTRA DE DOCUMENTOS
+        br
+        br
+        br
+        br
+        br
+      div.col.l6.m11.s11.offset-l4.offset-s1.offset-m1
+        ul.pagination
+          li.waves-effect.waves-green
+            a(href="#")
+              i.material-icons chevron_left
+          li.active.brown.darken-2
+            a(href="#") 1
+          li.waves-effect.waves-green
+            a(href="#") 2
+          li.waves-effect.waves-green
+            a(href="#") 3
+          li.waves-effect.waves-green
+            a(href="#") 4
+          li.waves-effect.waves-green.hide-on-small-only
+            a(href="#") 5
+          li.waves-effect.waves-green.hide-on-small-only
+            a(href="#") 6
+          li.waves-effect.waves-green.hide-on-small-only
+            a(href="#") 7
+          li.waves-effect.waves-green.hide-on-small-only
+            a(href="#") 8
+          li.waves-effect.waves-green
+            a(href="#")
+              i.material-icons chevron_right

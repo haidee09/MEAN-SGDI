@@ -1,14 +1,14 @@
 {
-  "name": "sistema-documentacion-dig",
+  "name": "sistema-documentacion-digital",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build && node ./server/server.js",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "start": " gulp views"
   },
   "private": true,
   "dependencies": {
@@ -20,7 +20,17 @@
     "@angular/platform-browser": "^2.4.0",
     "@angular/platform-browser-dynamic": "^2.4.0",
     "@angular/router": "^3.4.0",
+    "body-parser": "^1.17.1",
+    "cookie-parser": "^1.4.3",
     "core-js": "^2.4.1",
+    "express": "^4.15.2",
+    "jsonwebtoken": "^7.3.0",
+    "materialize-css": "^0.98.0",
+    "mongojs": "^2.4.0",
+    "mongoose": "^4.9.5",
+    "morgan": "^1.8.1",
+    "path": "^0.12.7",
+    "pug": "^2.0.0-beta11",
     "rxjs": "^5.1.0",
     "zone.js": "^0.7.6"
   },
@@ -30,17 +40,25 @@
     "@types/jasmine": "2.5.38",
     "@types/node": "~6.0.60",
     "codelyzer": "~2.0.0",
+    "gulp": "^3.9.1",
+    "gulp-nodemon": "^2.2.1",
+    "gulp-pug": "^3.3.0",
+    "gulp-pug2": "0.0.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-watch": "^4.3.11",
     "jasmine-core": "~2.5.2",
     "jasmine-spec-reporter": "~3.2.0",
     "karma": "~1.4.1",
     "karma-chrome-launcher": "~2.0.0",
     "karma-cli": "~1.0.1",
+    "karma-coverage-istanbul-reporter": "^0.2.0",
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
-    "karma-coverage-istanbul-reporter": "^0.2.0",
+    "nodemon": "^1.11.0",
     "protractor": "~5.1.0",
     "ts-node": "~2.0.0",
     "tslint": "~4.5.0",
-    "typescript": "~2.0.0"
+    "typescript": "~2.0.0",
+    "watchify": "^3.9.0"
   }
 }

@@ -1,0 +1,245 @@
+extends layout
+block estilo
+  link(rel="stylesheet" type='text/css' href="/stylesheets/styleUsuario.css")
+  link(rel="stylesheet" type='text/css' href="/stylesheets/styleFormularios.css")
+block content
+  div.card-panel.indigo.lighten-5.z-depth-5
+    form.col.s12
+      h5.center.flow-text Evaluación de Reporte de Residencia Profesional
+      div.row
+        div.input-field.col.l6.s12
+          i.material-icons.prefix contacts
+          input.validate(type="text")
+          label(for="txtNombreAlumno") Nombre del residente
+        div.input-field.col.l6.s12
+          i.material-icons.prefix fingerprint
+          input.validate(type="text", maxlength="8")
+          label(for="txtNumControl") Número de control
+        div.input-field.col.l6.s12
+          i.material-icons.prefix import_contacts
+          input.validate(type="text")
+          label(for="txtPrograma") Programa educativo
+        div.input-field.col.l6.s11
+          i.material-icons.prefix date_range
+          input.validate(type="text")
+          label(for="txtPeriodo") Periodo de realización de la Residencia Profesional
+        div.input-field.col.s12
+          i.material-icons.prefix create
+          input.validate(type="text")
+          label(for="txtNombreProyexto") Nombre del proyecto
+        div.input-field.col.l3.s6
+          i.material-icons.prefix bookmark
+          input.validate(type="text")
+          label(for="txtCalificacion") Calificación parcial
+
+      h6.center.flow-text Evaluación por el asesor externo
+      div.row
+        div.col.s12.m11.l9.offset-l1.input-field
+          table.responsive-table.bordered
+            thead
+              tr
+                th Criterios a evaluar
+                th Valor
+                th(data-field="evaluacion") Evaluación
+            tbody
+              tr
+                td  Portada
+                td 2
+                td
+                  input.validate(type="number", min="0",max="2")
+              tr
+                td Agradecimientos
+                td 2
+                td
+                  input.validate(type="number", min="0",max="2")
+              tr
+                td Índice
+                td 2
+                td
+                  input.validate(type="number", min="0",max="2")
+              tr
+                td Introducción
+                td 2
+                td
+                  input.validate(type="number", min="0",max="2")
+              tr
+                td Problemas a resolver, priorizándolos
+                td 5
+                td
+                  input.validate(type="number", min="0",max="5")
+              tr
+                td Objetivos
+                td 5
+                td
+                  input.validate(type="number", min="0",max="5")
+              tr
+                td Justificación
+                td
+                td
+                  input.validate(type="number", min="",max="")
+              tr
+                td Marco Teórico (fundamentos teóricos)
+                td 10
+                td
+                  input.validate(type="number", min="0",max="10")
+              tr
+                td Procedimiento y descripción de las actividades realizadas
+                td 5
+                td
+                  input.validate(type="number", min="0",max="5")
+              tr
+                td#filalarga Resultados, planos, gráficas, prototipos, manuales, programas, análisis estadísticos, modelos matemáticos, simulaciones, normativas, regulaciones y restricciones, entre otros. Solo para proyectos que por su naturaleza lo requieran: estudio de mercado, estudio técnico y estudio económico.
+                td 45
+                td
+                  input.validate(type="number", min="0",max="15")
+              tr
+                td Conclusiones, recomendaciones y experiencia profesional adquirida
+                td 5
+                td
+                  input.validate(type="number", min="0",max="15")
+              tr
+                td Competencias desarrolladas y/o aplicadas
+                td 3
+                td
+                  input.validate(type="number", min="0",max="3")
+              tr
+                td Fuentes de información
+                td 2
+                td
+                  input.validate(type="number", min="0",max="2")
+              tr
+                td#textoDerecha Calificación total
+                td 100
+                td
+                  input.validate(type="number", min="0",max="100")
+
+      div.input-field.col.l12.s12
+        i.material-icons.prefix search
+        textarea#textarea1.materialize-textarea
+        label(for="textarea1") Observaciones
+
+      div.row
+        div.input-field.col.l6.s12
+          i.material-icons.prefix today
+          input.datepicker(type="date")
+          label(for="txtTipoPrograma") Fecha de evaluación
+        div.input-field.col.l6.s12
+          i.material-icons.prefix person
+          input.validate(type="text")
+          label(for="txtAsesorExterno") Nombre del asesor externo
+
+      h6.center.flow-text Evaluación por el asesor interno
+      div.row
+        div.col.s12.m11.l9.offset-l1
+          table.responsive-table.bordered
+            thead
+              tr
+                th Criterios a evaluar
+                th Valor
+                th(data-field="evaluacion2") Evaluación
+            tbody
+              tr
+                td  Portada
+                td 2
+                td
+                  input.validate(type="number", min="0",max="2")
+              tr
+                td Agradecimientos
+                td 2
+                td
+                  input.validate(type="number", min="0",max="2")
+              tr
+                td Índice
+                td 2
+                td
+                  input.validate(type="number", min="0",max="2")
+              tr
+                td Introducción
+                td 2
+                td
+                  input.validate(type="number", min="0",max="2")
+              tr
+                td Problemas a resolver, priorizándolos
+                td 5
+                td
+                  input.validate(type="number", min="0",max="5")
+              tr
+                td Objetivos
+                td 5
+                td
+                  input.validate(type="number", min="0",max="5")
+              tr
+                td Justificación
+                td
+                td
+                  input.validate(type="number", min="",max="")
+              tr
+                td Marco Teórico (fundamentos teóricos)
+                td 10
+                td
+                  input.validate(type="number", min="0",max="10")
+              tr
+                td Procedimiento y descripción de las actividades realizadas
+                td 5
+                td
+                  input.validate(type="number", min="0",max="5")
+              tr
+                td#filalarga Resultados, planos, gráficas, prototipos, manuales, programas, análisis estadísticos, modelos matemáticos, simulaciones, normativas, regulaciones y restricciones, entre otros. Solo para proyectos que por su naturaleza lo requieran: estudio de mercado, estudio técnico y estudio económico.
+                td 45
+                td
+                  input.validate(type="number", min="0",max="15")
+              tr
+                td Conclusiones, recomendaciones y experiencia profesional adquirida
+                td 5
+                td
+                  input.validate(type="number", min="0",max="15")
+              tr
+                td Competencias desarrolladas y/o aplicadas
+                td 3
+                td
+                  input.validate(type="number", min="0",max="3")
+              tr
+                td Fuentes de información
+                td 2
+                td
+                  input.validate(type="number", min="0",max="2")
+              tr
+                td#textoDerecha Calificación total
+                td 100
+                td
+                  input.validate(type="number", min="0",max="100")
+
+      div.input-field.col.l12.s12
+        i.material-icons.prefix search
+        textarea#textarea2.materialize-textarea
+        label(for="textarea2") Observaciones
+
+      div.row
+        div.input-field.col.s12
+          label(for="txtTipoPrograma2") Fecha de evaluación
+      div.row
+        div.input-field.col.l6.s12
+          i.material-icons.prefix today
+          input.datepicker(type="date")
+        div.input-field.col.l6.s12
+          i.material-icons.prefix person
+          input.validate(type="text")
+          label(for="txtAsesorInterno") Nombre del asesor interno
+
+      div.row.hide-on-med-and-down
+        div.input-field.right-align.col.l12
+          button.btn.waves-effect.green.darken-4(type="submit" name="action") Cancelar
+            i.material-icons.right reply
+          button.btn.waves-effect.green.darken-3(type="submit" name="action") Generar PDF
+            i.material-icons.right note_add
+      div.row.hide-on-large-only
+        div.input-field.right-align.fixed-action-btn.horizontal
+          a.btn-floating.btn-large.green.darken-1
+            i.large.material-icons done_all
+          ul
+            li
+              a.btn-floating.deep-orange.lighten-1yellow.darken-1
+                i.material-icons reply
+            li
+              a.btn-floating.orange.darken-1
+                i.material-icons note_add

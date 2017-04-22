@@ -1,0 +1,114 @@
+extends layout
+block estilo
+  link(rel="stylesheet" type='text/css' href="/stylesheets/styleUsuario.css")
+  link(rel="stylesheet" type='text/css' href="/stylesheets/styleFormularios.css")
+block content
+  div.card-panel.indigo.lighten-5.z-depth-5
+    form.container.col.s12
+      h5.center.flow-text Asignación de Sinodales
+      div.row
+        div.input-field.col.l6.s12
+          i.material-icons.prefix today
+          input.datepicker(type="date")
+          label(for="txtFecha") Fecha
+        div.input-field.col.l6.s12
+          i.material-icons.prefix reorder
+          input.validate(type="text",maxlength="10")
+          label(for="txtFolio") Folio
+        div.input-field.col.l8.s12
+          i.material-icons.prefix contacts
+          input.validate(type="text")
+          label(for="txtJefeDepartamento") Jefe de departamento
+      div.row
+        div.input-field.col.l8.s12
+          i.material-icons.prefix school
+          input.validate(type="text")
+          label(for="txtTipoTitulacion") Tipo de titulación
+      div.row
+        div.input-field.col.l8.s12
+          i.material-icons.prefix person
+          input.validate(type="text")
+          label(for="txtNombreAlumno") Nombre del alumno
+      div.row
+        div.input-field.col.l6.s12
+          i.material-icons.prefix local_library
+          input.validate(type="text")
+          label(for="txtCarrera") Carrera
+        div.input-field.col.l6.s12
+          i.material-icons.prefix today
+          input.datepicker(type="date")
+          label(for="txtFechaTitulacion") Fecha de titulación
+      h6.center.flow-text Datos presidente
+      div.row
+        div.input-field.col.s12
+          i.material-icons.prefix contacts
+          input.validate(type="text")
+          label(for="txtNombreDocente") Nombre del docente
+        div.input-field.col.l6.s12
+          i.material-icons.prefix grade
+          input.validate(type="text")
+          label(for="txtGradoAcademico") Grado académico
+        div.input-field.col.l6.s12
+          i.material-icons.prefix  graphic_eq
+          input.validate(type="text")
+          label(for="txtCedula") Cédula profesional
+      h6.center.flow-text Datos Secretario
+      div.row
+        div.input-field.col.s12
+          i.material-icons.prefix contacts
+          input.validate(type="text")
+          label(for="txtNombreDocente") Nombre del docente
+        div.input-field.col.l6.s12
+          i.material-icons.prefix grade
+          input.validate(type="text")
+          label(for="txtGradoAcademico") Grado académico
+        div.input-field.col.l6.s12
+          i.material-icons.prefix graphic_eq
+          input.validate(type="text")
+          label(for="txtCedula") Cédula profesional
+      h6.center.flow-text Datos Vocal
+      div.row
+        div.input-field.col.s12
+          i.material-icons.prefix contacts
+          input.validate(type="text")
+          label(for="txtNombreDocente") Nombre del docente
+        div.input-field.col.l6.s12
+          i.material-icons.prefix grade
+          input.validate(type="text")
+          label(for="txtGradoAcademico") Grado académico
+        div.input-field.col.l6.s12
+          i.material-icons.prefix
+          input.validate(type="text")
+          label(for="txtCedula") Cédula profesional
+
+      h6.center.flow-text Datos Suplente
+      div.row
+        div.input-field.col.s12
+          i.material-icons.prefix contacts
+          input.validate(type="text")
+          label(for="txtNombreDocente") Nombre del docente
+        div.input-field.col.l6.s12
+          i.material-icons.prefix grade
+          input.validate(type="text")
+          label(for="txtGradoAcademico") Grado académico
+        div.input-field.col.l6.s12
+          i.material-icons.prefix   graphic_eq
+          input.validate(type="text")
+          label(for="txtCedula") Cédula profesional
+      div.row.hide-on-med-and-down
+        div.input-field.right-align.col.l12
+          button.btn.waves-effect.green.darken-4(type="submit" name="action") Cancelar
+            i.material-icons.right reply
+          button.btn.waves-effect.green.darken-3(type="submit" name="action") Generar PDF
+            i.material-icons.right note_add
+      div.row.hide-on-large-only
+        div.input-field.right-align.fixed-action-btn.horizontal
+          a.btn-floating.btn-large.green.darken-1
+            i.large.material-icons done_all
+          ul
+            li
+              a.btn-floating.deep-orange.lighten-1yellow.darken-1
+                i.material-icons reply
+            li
+              a.btn-floating.orange.darken-1
+                i.material-icons note_add

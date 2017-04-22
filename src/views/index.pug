@@ -1,0 +1,22 @@
+extends layout
+block estilo
+  link(rel="stylesheet" type='text/css' href="/stylesheets/styleUsuario.css")
+block content
+  div#login-page.row
+    div.col.s8.l6.offset-l3.offset-s2.card-panel.z-depth-5
+      form.login-form
+        div.row
+          p.center.login-form-text.flow-text Iniciar Sesión
+        div.row.margin
+          div.input-field.col.s12
+            i.material-icons.prefix account_circle
+            input(id='username', type='text', class='validate')
+            label(for='username') Usuario
+        div.row.margin
+          div.input-field.col.s12
+            i.material-icons.prefix lock_outline
+            input(id='password', type='password', class='validate')
+            label(for='password') Contraseña
+        div.row
+          div.input-field.col.s12
+            a(href="#", class="btn waves-effect waves-light col s12", id="boton-ingresar") INGRESAR

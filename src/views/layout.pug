@@ -1,0 +1,50 @@
+doctype html
+html(lang="es")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    title=title
+    link(rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons")
+    link(rel="stylesheet" type='text/css' href="/stylesheets/materialize.min.css")
+    link(rel='shortcut icon' type='images/png' href='/images/itclogo.png')
+    block estilo
+  body.lime.lighten-4
+    header
+      div.row
+        div.teal.darken-4.col.l12.m12.s12#h1
+          div.row.hide-on-med-and-down
+            div.col.l3.m3
+              img.responsive-img(src="/images/SEP_LOGO.png")
+            div.col.l6.m6
+              div.col.l12.m12
+                h4.grey-text.text-lighten-2.flow-text.center TECNOLÓGICO NACIONAL DE MÉXICO
+              div.col.l12.m12
+                h6.grey-text.text-lighten-2.flow-text.center INSTITUTO TECNOLÓGICO DE CUAUTLA
+            div.col.l3.m3
+              img.responsive-img(src="/images/ITC_LOGO1.png")
+          div.row.hide-on-large-only
+              div.col.s8
+                h6.grey-text.text-lighten-2.flow-text.center TECNM
+                h6.grey-text.text-lighten-2.flow-text.center ITC
+              div.col.s4
+                img.responsive-img(src="/images/ITC_LOGO1.png")
+        div.green.darken-2.col.s12
+          div.row
+            div.col.s12
+              h3.white-text.flow-text.center SISTEMA DE DOCUMENTACIÓN DIGITAL
+            div.col.s12
+              block barraNav
+
+    block content
+
+    footer.page-footer.teal.darken-4
+      div.footer-copyright.green.darken-2.col.s12
+        div.container.center
+          p 2017 Copyright Text | Derechos reservados
+          a.grey-text.text-lighten-4(href="https://www.facebook.com/CMarian.Garcia" target) @MarianGarcía |
+          a.grey-text.text-lighten-4(href="https://www.facebook.com/analuisa.islasavila") @AnaIslas |
+          a.grey-text.text-lighten-4(href="https://www.facebook.com/haidee.onofreramirez") @HaideeOnofre |
+          a.grey-text.text-lighten-4(href="https://www.facebook.com/Lizz.PB") @LizbethPerez
+    script(src='/javascripts/jquery-2.1.1.min.js')
+    script(src='/javascripts/materialize.min.js')
+    script(src='/javascripts/indexAdmin.js')

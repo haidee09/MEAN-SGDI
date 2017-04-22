@@ -1,0 +1,287 @@
+extends layout
+block estilo
+  link(rel="stylesheet" type='text/css' href="/stylesheets/styleUsuario.css")
+  link(rel="stylesheet" type='text/css' href="/stylesheets/styleFormularios.css")
+block content
+  div.row.l12
+    div.card-panel.indigo.lighten-5.z-depth-5
+      form
+        h5.center.flow-text Reporte Final del nivel del desempeño de los alumnos
+        div.row
+          div.input-field.col.l6.s12
+            i.material-icons.prefix contacts
+            input.validate#txtDepartamento(type="text", placeholder="Departartamento de Sistemas y Computación")
+            label(for="txtDepartamento") Departamento de
+          div.input-field.col.l6.s12
+            i.material-icons.prefix local_library
+            input.validate#NoSemestre(type="number", min="1", max="9" )
+            label(for="NoSemestre") Semestre
+          div.input-field.col.s12
+            i.material-icons.prefix person
+            input.validate#profesor(type="text")
+            label(for="profesor") Profesor(a)
+          div.input-field.col.l6.s12
+            i.material-icons.prefix group_work
+            input.validate#NoGrupos(type="number", min="1", max="5")
+            label(for="NoGrupos") No.Grupos atendidos
+          div.input-field.col.l6.s12
+            i.material-icons.prefix assignment
+            input.validate#NoAsignaturas(type="number", min="1", max="5")
+            label(for="NoAsignaturas") No.Asignaturas diferentes
+          div.row
+            div.col.s12.m11.l12.input-field
+              table.responsive-table.bordered
+                thead
+                  tr
+                    th(data-field="id") Asignatura
+                    th(data-field="actividades") Carrera
+                    th(data-field="a") A
+                    th(data-field="primeraOp") 1a Op
+                    th(data-field="segundaOp") 2da Op
+                    th(data-field="c") C
+                    th(data-field="d") D
+                    th(data-field="e") E
+                    th(data-field="f") F
+                    th(data-field="g") G
+                tbody
+                  tr
+                    td
+                      input.validate#asignatura1(name="fila1", type="text")
+                      label(for="asignatura1")
+                    td
+                      input.validate#carrera1(name="fila1", type="text")
+                      label(for="carrera1")
+                    td
+                      input.validate#A1(name="fila1", type="number", min="0", max="50")
+                      label(for="A1")
+                    td
+                      input.validate#B11(name="fila1", type="number", min="0", max="50")
+                      label(for="B11")
+                    td
+                      input.validate#B21(name="fila1", type="number", min="0", max="50")
+                      label(for="B21")
+                    td
+                      input.validate#C1(name="fila1", type="number", min="0", max="50")
+                      label(for="C1")
+                    td
+                      input.validate#D1(name="fila1", type="number", min="0", max="50")
+                      label(for="D1")
+                    td
+                      input.validate#E1(name="fila1", type="number", min="0", max="50")
+                      label(for="E1")
+                    td
+                      input.validate#F1(name="fila1", type="number", min="0", max="50")
+                      label(for="F1")
+                    td
+                      input.validate#G1(name="fila1", type="number", min="0", max="50")
+                      label(for="G1")
+                  tr
+                    td
+                      input.validate#asignatura2(name="fila2", type="text")
+                      label(for="asignatura2")
+                    td
+                      input.validate#carrera2(name="fila2", type="text")
+                      label(for="carrera2")
+                    td
+                      input.validate#A2(name="fila2", type="number", min="0", max="50")
+                      label(for="A2")
+                    td
+                      input.validate#B12(name="fila2", type="number", min="0", max="50")
+                      label(for="B12")
+                    td
+                      input.validate#B22(name="fila2", type="number", min="0", max="50")
+                      label(for="B21")
+                    td
+                      input.validate#C2(name="fila2", type="number", min="0", max="50")
+                      label(for="C2")
+                    td
+                      input.validate#D2(name="fila2", type="number", min="0", max="50")
+                      label(for="D2")
+                    td
+                      input.validate#E2(name="fila2", type="number", min="0", max="50")
+                      label(for="E2")
+                    td
+                      input.validate#F2(name="fila2", type="number", min="0", max="50")
+                      label(for="F2")
+                    td
+                      input.validate#G2(name="fila2", type="number", min="0", max="50")
+                      label(for="G2")
+                  tr
+                    td
+                      input.validate#asignatura3(name="fila3", type="text")
+                      label(for="asignatura3")
+                    td
+                      input.validate#carrera3(name="fila3", type="text")
+                      label(for="carrera3")
+                    td
+                      input.validate#A3(name="fila3", type="number", min="0", max="50")
+                      label(for="A3")
+                    td
+                      input.validate#B13(name="fila3", type="number", min="0", max="50")
+                      label(for="B13")
+                    td
+                      input.validate#B23(name="fila3", type="number", min="0", max="50")
+                      label(for="B23")
+                    td
+                      input.validate#C3(name="fila3", type="number", min="0", max="50")
+                      label(for="C3")
+                    td
+                      input.validate#D3(name="fila3", type="number", min="0", max="50")
+                      label(for="D3")
+                    td
+                      input.validate#E3(name="fila3", type="number", min="0", max="50")
+                      label(for="E3")
+                    td
+                      input.validate#F3(name="fila3", type="number", min="0", max="50")
+                      label(for="F3")
+                    td
+                      input.validate#G3(name="fila3", type="number", min="0", max="50")
+                      label(for="G3")
+                  tr
+                    td
+                      input.validate#asignatura4(name="fila4", type="text")
+                      label(for="asignatura2")
+                    td
+                      input.validate#carrera4(name="fila4", type="text")
+                      label(for="carrera2")
+                    td
+                      input.validate#A4(name="fila4", type="number", min="0", max="50")
+                      label(for="A4")
+                    td
+                      input.validate#B14(name="fila4", type="number", min="0", max="50")
+                      label(for="B14")
+                    td
+                      input.validate#B24(name="fila4", type="number", min="0", max="50")
+                      label(for="B24")
+                    td
+                      input.validate#C4(name="fila4", type="number", min="0", max="50")
+                      label(for="C4")
+                    td
+                      input.validate#D4(name="fila4", type="number", min="0", max="50")
+                      label(for="D4")
+                    td
+                      input.validate#E4(name="fila4", type="number", min="0", max="50")
+                      label(for="E4")
+                    td
+                      input.validate#F4(name="fila4", type="number", min="0", max="50")
+                      label(for="F4")
+                    td
+                      input.validate#G4(name="fila4", type="number", min="0", max="50")
+                      label(for="G4")
+                  tr
+                    td
+                      input.validate#asignatura5(name="fila5", type="text")
+                      label(for="asignatura5")
+                    td
+                      input.valdidate#carrera5(name="fila5", type="text")
+                      label(for="carrera5")
+                    td
+                      input.validate#A5(name="fila5", type="number", min="0", max="50")
+                      label(for="A5")
+                    td
+                      input.validate#B15(name="fila5", type="number", min="0", max="50")
+                      label(for="B15")
+                    td
+                      input.validate#B25(name="fila5", type="number", min="0", max="50")
+                      label(for="B25")
+                    td
+                      input.validate#C5(name="fila5", type="number", min="0", max="50")
+                      label(for="C5")
+                    td
+                      input.validate#D5(name="fila5", type="number", min="0", max="50")
+                      label(for="D5")
+                    td
+                      input.validate#E5(name="fila5", type="number", min="0", max="50")
+                      label(for="E5")
+                    td
+                      input.validate#F5(name="fila5", type="number", min="0", max="50")
+                      label(for="F5")
+                    td
+                      input.validate#G5(name="fila5", type="number", min="0", max="50")
+                      label(for="G5")
+                  tr
+                    td
+                      input.validate#asignatura6(name="fila6", type="text")
+                      label(for="asignatura6")
+                    td
+                      input.validate#carrera6(name="fila6", type="text")
+                      label(for="carrera6")
+                    td
+                      input.validate#A6(name="fila6", type="number", min="0", max="50")
+                      label(for="A6")
+                    td
+                      input.validate#B16(name="fila6", type="number", min="0", max="50")
+                      label(for="B16")
+                    td
+                      input.validate#B26(name="fila6", type="number", min="0", max="50")
+                      label(for="B26")
+                    td
+                      input.validate#C6(name="fila6", type="number", min="0", max="50")
+                      label(for="C6")
+                    td
+                      input.validate#D6(name="fila6", type="number", min="0", max="50")
+                      label(for="D6")
+                    td
+                      input.validate#E6(name="fila6", type="number", min="0", max="50")
+                      label(for="E6")
+                    td
+                      input.validate#F6(name="fila6", type="number", min="0", max="50")
+                      label(for="F6")
+                    td
+                      input.validate#G6(name="fila6", type="number", min="0", max="50")
+                      label(for="G6")
+                  tr
+                    td TOTALES
+                    td
+                      input.validate#asignaturatotales(name="totales1", type="text")
+                      label(for="asignaturatotales")
+                    td
+                      input.validate#carreratotales(name="totales1", type="text")
+                      label(for="carreratotales")
+                    td
+                      input.validate#Atotales(name="totales1", type="number", min="0", max="50")
+                      label(for="Atotales")
+                    td
+                      input.validate#B1totales(name="totales1", type="number", min="0", max="50")
+                      label(for="B1totales")
+                    td
+                      input.validate#B2totales(name="totales1", type="number", min="0", max="50")
+                      label(for="B2totales")
+                    td
+                      input.validate#Ctotales(name="totales1", type="number", min="0", max="50")
+                      label(for="Ctotales")
+                    td
+                      input.validate#Dtotales(name="totales1", type="number", min="0", max="50")
+                      label(for="Dtotales")
+                    td
+                      input.validate#Etotales(name="totales1", type="number", min="0", max="50")
+                      label(for="Etotales")
+                    td
+                      input.validate#Ftotales(name="totales1", type="number", min="0", max="50")
+                      label(for="Ftotales")
+
+          div.input-field.col.s12
+            i.material-icons.prefix person
+            input.validate#txtFirmaDocente(type="text")
+            label(for="txtFirmaDocente") Nombre y Firma del Docente
+          div.input-field.col.s12
+            i.material-icons.prefix contacts
+            input.validate#txtFirmaAreaAcademica(type="text")
+            label(for="txtFirmaAreaAcademica") Nombre y Firma del Jefe de Área Académica
+        div.row.hide-on-med-and-down
+          div.input-field.right-align.col.l12
+            button.btn.waves-effect.green.darken-4(type="submit" name="action") Cancelar
+              i.material-icons.right reply
+            button.btn.waves-effect.green.darken-3(type="submit" name="action") Generar PDF
+              i.material-icons.right note_add
+        div.row.hide-on-large-only
+          div.input-field.right-align.fixed-action-btn.horizontal
+            a.btn-floating.btn-large.green.darken-1
+              i.large.material-icons done_all
+            ul
+              li
+                a.btn-floating.deep-orange.lighten-1yellow.darken-1
+                  i.material-icons reply
+              li
+                a.btn-floating.orange.darken-1
+                  i.material-icons note_add

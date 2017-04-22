@@ -1,0 +1,267 @@
+extends layout
+block estilo
+  link(rel="stylesheet" type='text/css' href="/stylesheets/styleUsuario.css")
+  link(rel="stylesheet" type='text/css' href="/stylesheets/styleFormularios.css")
+block content
+  div.card-panel.indigo.lighten-5.z-depth-5
+    form.col.s12
+      h5.center.flow-text Carta de Liberación de Actividades Academicas
+      div.row
+        div.input-field.col.l6.s12
+          i.material-icons.prefix reorder
+          input.validate(type="text",maxlength="10")
+          label(for="txtFolio") Folio
+        div.input-field.col.l6.s12
+          i.material-icons.prefix business
+          input.validate(type="text")
+          label(for="txtDepartamento") Departamento académico
+        div.input-field.col.l6.s12
+          i.material-icons.prefix today
+          input.datepicker(type="date")
+          label(for="txtFecha") Fecha
+        div.input-field.col.l6.s12
+          i.material-icons.prefix place
+          input.validate(type="text")
+          label(for="txtLugar") Lugar
+        div.input-field.col.l6.s12
+          i.material-icons.prefix contacts
+          input.validate(type="text")
+          label(for="txtNombreDocente") Nombre del docente
+        div.input-field.col.l6.s12
+          i.material-icons.prefix turned_in
+          input.validate(type="text")
+          label(for="txtSemestre") Semestre
+      div.row
+        div.col.s12.m11.l12
+          table.responsive-table
+            thead
+              tr
+                th.data-field#Actividades Actividades
+                th.data-field#Si S
+                th.data-field#No N
+                th.data-field#NA N/A A
+            tbody
+              tr
+                td
+                  div.hide-on-med-and-down
+                    p Asistencia a reuniones convocadas
+                  div.hide-on-large-only
+                    l Asis Reuniones
+
+                td
+                  input.with-gap#txtAsistReunionesSi(name="AsistReuniones",type="radio")
+                  label(for="txtAsistReunionesSi")
+                td
+                  input.with-gap#txtAsistReunionesNo(name="AsistReuniones",type="radio")
+                  label(for="txtAsistReunionesNo")
+                td
+                  input.with-gap#txtAsistReunionesNA(name="AsistReuniones",type="radio")
+                  label(for="txtAsistReunionesNA")
+              tr
+                td
+                  div.hide-on-med-and-down
+                    p Participación en programas de formación y actualización docente
+                  div.hide-on-large-only
+                    l Part prog Form y Act
+
+                td
+                  input.with-gap#txtPartProgFormActDocenteSi(name="PartProgFormActDocente",type="radio")
+                  label(for="txtPartProgFormActDocenteSi")
+                td
+                  input.with-gap#txtPartProgFormActDocenteNo(name="PartProgFormActDocente",type="radio")
+                  label(for="txtPartProgFormActDocenteNo")
+                td
+                  input.with-gap#txtPartProgFormActDocenteNA(name="PartProgFormActDocente",type="radio")
+                  label(for="txtPartProgFormActDocenteNA")
+              tr
+                td
+                  div.hide-on-med-and-down
+                    p Asesorías en procesos de titulación integral encomendadas
+                  div.hide-on-large-only
+                    l Ases titulacion
+                td
+                    input.with-gap#txtAsesProcTitlIngrlSi(name="AsesProcTtlIngrl",type="radio")
+                    label(for="txtAsesProcTitlIngrlSi")
+                td
+                  input.with-gap#txtAsesProcTitlIngrlNo(name="AsesProcTtlIngrl",type="radio")
+                  label(for="txtAsesProcTitlIngrlNo")
+                td
+                  input.with-gap#txtAsesProcTitlIngrlNA(name="AsesProcTtlIngrl",type="radio")
+                  label(for="txtAsesProcTitlIngrlNA")
+              tr
+                td
+                  div.hide-on-med-and-down
+                    p Propuestas de mejoras en la operación de programas y proyectos académicos
+                  div.hide-on-large-only
+                    l Prop de mejoras prog y proy
+                td
+                  input.with-gap#txtProMejOpProgProyAcadSi(name="ProMejOpProgProyAcad",type="radio")
+                  label(for="txtProMejOpProgProyAcadSi")
+                td
+                  input.with-gap#txtProMejOpProgProyAcadNo(name="ProMejOpProgProyAcad",type="radio")
+                  label(for="txtProMejOpProgProyAcadNo")
+                td
+                  input.with-gap#txtProMejOpProgProyAcadNA(name="ProMejOpProgProyAcad",type="radio")
+                  label(for="txtProMejOpProgProyAcadNA")
+              tr
+                td
+                  div.hide-on-med-and-down
+                      p Sinodales en protocolos de titulación
+                  div.hide-on-large-only
+                    l Sinodales
+
+                td
+                  input.with-gap#txtSinodalProtTtlSi(name="SinodalProtTtl",type="radio")
+                  label(for="txtSinodalProtTtlSi")
+                td
+                  input.with-gap#txtSinodalProtTtlNo(name="SinodalProtTtl",type="radio")
+                  label(for="txtSinodalProtTtlNo")
+                td
+                  input.with-gap#txtSinodalProtTtlNA(name="SinodalProtTtl",type="radio")
+                  label(for="txtSinodalProtTtlNA")
+              tr
+                td
+                  div.hide-on-med-and-down
+                    p Participación en eventos de la academia
+                  div.hide-on-large-only
+                    l Part Eventos
+                td
+                  input.with-gap#txtPartEvntAcadSi(name="PartEvntAcad",type="radio")
+                  label(for="txtPartEvntAcadSi")
+                td
+                    input.with-gap#txtPartEvntAcadNo(name="PartEvntAcad",type="radio")
+                    label(for="txtPartEvntAcadNo")
+                td
+                  input.with-gap#txtPartEvntAcadNA(name="PartEvntAcad",type="radio")
+                  label(for="txtPartEvntAcadNA")
+              tr
+                td
+                  div.hide-on-med-and-down
+                    p Contribución con propuestas de mejora en los planes y programas de estudio
+                  div.hide-on-large-only
+                    l Prop Mejoras pln y prog
+                td
+                  input.with-gap#txtProMejPlanProgSi(name="ProMejPlanProg",type="radio")
+                  label(for="txtProMejPlanProgSi")
+                td
+                  input.with-gap#txtProMejPlanProgNo(name="ProMejPlanProg",type="radio")
+                  label(for="txtProMejPlanProgNo")
+                td
+                  input.with-gap#txtProMejPlanProgNA(name="ProMejPlanProg",type="radio")
+                  label(for="txtProMejPlanProgNA")
+              tr
+                td
+                  div.hide-on-med-and-down
+                    p Desarrollo de materiales de apoyo didáctico
+                  div.hide-on-large-only
+                    l Des mat didactico
+                td
+                  input.with-gap#txtDesMatApoyDidacticoSi(name="DesMatApoyDidactico",type="radio")
+                  label(for="txtDesMatApoyDidacticoSi")
+                td
+                  input.with-gap#txtDesMatApoyDidacticoNo(name="DesMatApoyDidactico",type="radio")
+                  label(for="txtDesMatApoyDidacticoNo")
+                td
+                  input.with-gap#txtDesMatApoyDidacticoNA(name="DesMatApoyDidactico",type="radio")
+                  label(for="txtDesMatApoyDidacticoNA")
+              tr
+                td
+                  div.hide-on-med-and-down
+                    p Propuesta para bancos de proyectos
+                  div.hide-on-large-only
+                    l Prop proyectos
+                td
+                  input.with-gap#txtPropBancoProyectoSi(name="PropBancoProyecto",type="radio")
+                  label(for="txtPropBancoProyectoSi")
+                td
+                  input.with-gap#txtPropBancoProyectoNo(name="PropBancoProyecto",type="radio")
+                  label(for="txtPropBancoProyectoNo")
+                td
+                  input.with-gap#txtPropBancoProyectoNA(name="PropBancoProyecto",type="radio")
+                  label(for="txtPropBancoProyectoNA")
+              tr
+                td
+                  div.hide-on-med-and-down
+                    p Asesorías académicas
+                  div.hide-on-large-only
+                    l Ases Acad
+                td
+                  input.with-gap#txtAsesAcademicasSi(name="AsesAcademicas",type="radio")
+                  label(for="txtAsesAcademicasSi")
+                td
+                    input.with-gap#txtAsesAcademicasNo(name="AsesAcademicas",type="radio")
+                    label(for="txtAsesAcademicasNo")
+                td
+                  input.with-gap#txtAsesAcademicasNA(name="AsesAcademicas",type="radio")
+                  label(for="txtAsesAcademicasNA")
+              tr
+                td Tutoría
+                td
+                  input.with-gap#txtTutoriaSi(name="Tutoria",type="radio")
+                  label(for="txtTutoriaSi")
+                td
+                  input.with-gap#txtTutoriaNo(name="Tutoria",type="radio")
+                  label(for="txtTutoriaNo")
+                td
+                  input.with-gap#txtTutoriaNA(name="Tutoria",type="radio")
+                  label(for="txtTutoriaNA")
+              tr
+                td
+                  div.hide-on-med-and-down
+                    p Participación  en  comisiones  académicas
+                  div.hide-on-large-only
+                    l Part comisiones
+                td
+                  input.with-gap#txtPartComAcademicasSi(name="PartComAcademicas",type="radio")
+                  label(for="txtPartComAcademicasSi")
+                td
+                  input.with-gap#txtPartComAcademicasNo(name="PartComAcademicas",type="radio")
+                  label(for="txtPartComAcademicasNo")
+                td
+                  input.with-gap#txtPartComAcademicasNA(name="PartComAcademicas",type="radio")
+                  label(for="txtPartComAcademicasNA")
+              tr
+                td Otros
+                td
+                  input.with-gap#txtOtrosActSi(name="OtrosAct",type="radio")
+                  label(for="txtOtrosActSi")
+                td
+                  input.with-gap#txtOtrosActNo(name="OtrosAct",type="radio")
+                  label(for="txtOtrosActNo")
+                td
+                  input.with-gap#txtOtrosActNA(name="OtrosAct",type="radio")
+                  label(for="txtOtrosActNA")
+              tr
+                td
+                  div.hide-on-med-and-down
+                    p ¿Cumplio con las actividades academicas encomendadas al 100%?
+                  div.hide-on-large-only
+                    l nivel de desempeño
+                td
+                  input.with-gap#txtDesempenoActSi(name="DesempenoAct",type="radio")
+                  label(for="txtDesempenoActSi")
+                td
+                  input.with-gap#txtDesempenoActNo(name="DesempenoAct",type="radio")
+                  label(for="txtDesempeñoActNo")
+                td
+                  input.with-gap#txtDesempenoActNA(name="DesempenoAct",type="radio")
+                  label(for="txtDesempeñoActNA")
+
+
+    div.row.hide-on-med-and-down
+      div.input-field.right-align.col.l12
+        button.btn.waves-effect.green.darken-4(type="submit" name="action") Cancelar
+          i.material-icons.right reply
+        button.btn.waves-effect.green.darken-3(type="submit" name="action") Generar PDF
+          i.material-icons.right note_add
+    div.row.hide-on-large-only
+      div.input-field.right-align.fixed-action-btn.horizontal
+        a.btn-floating.btn-large.green.darken-1
+          i.large.material-icons done_all
+        ul
+          li
+            a.btn-floating.deep-orange.lighten-1yellow.darken-1
+              i.material-icons reply
+          li
+            a.btn-floating.orange.darken-1
+              i.material-icons note_add

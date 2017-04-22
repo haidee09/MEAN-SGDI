@@ -1,0 +1,74 @@
+extends indexAdministrador
+block estilo
+  link(rel="stylesheet" type='text/css' href="/stylesheets/styleAdministrador.css")
+  link(rel="stylesheet" type='text/css' href="/stylesheets/styleUsuario.css")
+block content
+  div.row
+    div.col.s10.l8.offset-l2.offset-s1.card-panel
+      h5.center Generar Documentos
+      div.input-field.col.s12
+        input(id="filtro", type="search", class="validate" placeholder="Búsqueda")
+        label.label-icon(for="filtro")
+          i.material-icons search
+        i.material-icons close
+      ul.collection
+        li.collection-item.avatar
+          i.material-icons.circle.green description
+          span#titulo1.title.col.l12.m12.s11.truncate Solicitud de Mantenimiento
+          p.col.l12.m12.s12 Solicitudes
+          a(href="/administrador/generarDocumentos/solicitudMantenimiento", class="secondary-content")
+            i.material-icons.icon-brown send
+        li.collection-item.avatar
+          i.material-icons.circle.green description
+          span#titulo1.title.col.l12.m12.s11 Formato de Solicitud de Visita
+          p.col.l12.m12.s12 Solicitudes
+          a(href="/administrador/generarDocumentos/solicitudVisita", class="secondary-content")
+            i.material-icons.icon-brown send
+        li.collection-item.avatar
+          i.material-icons.circle.green description
+          span#titulo1.title.col.l12.m12.s11.truncate Constancia de Liberacion de Actividades Frente a Grupo
+          p.col.l12.m12.s12 Constancias
+          a(href="/administrador/generarDocumentos/liberacionDocente", class="secondary-content")
+            i.material-icons.icon-brown send
+        li.collection-item.avatar
+          i.material-icons.circle.green description
+          span#titulo1.title.col.l12.m12.s11.truncate Constancia de Cumplimiento de Actividad Complementaria
+          p.col.l12.m12.s12 Constancias
+          a(href="/administrador/generarDocumentos/constanciaActComplementaria", class="secondary-content")
+            i.material-icons.icon-brown send
+        li.collection-item.avatar
+          i.material-icons.circle.green description
+          span#titulo1.title.col.l12.m12.s11.truncate Reporte Final del Nivel de Desempeño de los Alumnos
+          p.col.l12.m12.s12 Reportes
+          a(href="/administrador/generarDocumentos/reporteDesempAlumnos", class="secondary-content")
+            i.material-icons.icon-brown send
+        li.collection-item.avatar
+          i.material-icons.circle.green description
+          span#titulo1.title.title.col.l12.m12.s11.truncate Formato de Evaluación de Reporte de Residencia Profesional
+          p.col.l12.m12.s12 Residencias Profesionales
+          a(href="/administrador/generarDocumentos/evaluacionReporteResidencia", class="secondary-content")
+            i.material-icons.icon-brown send
+        li.collection-item.avatar
+          i.material-icons.circle.green description
+          span#titulo1.title.col.l12.m12.s11.truncate Formato de Evaluación y Seguimiento de Residencia Profesional
+          p.col.l12.m12.s12 Residencias Profesionales
+          a(href="/administrador/generarDocumentos/evaluacionResidencia", class="secondary-content")
+            i.material-icons.icon-brown send
+        li.collection-item.avatar
+          i.material-icons.circle.green description
+          span#titulo1.title.col.l12.m12.s11.truncate Asignación de Asesor Interno para Residencias Profesionales
+          p.col.l12.m12.s12 Residencias Profesionales
+          a(href="/administrador/generarDocumentos/asesorInternoResidencia", class="secondary-content")
+            i.material-icons.icon-brown send
+        li.collection-item.avatar
+          i.material-icons.circle.green description
+          span#titulo1.title.col.l12.m12.s11 Asignación de Sinodales
+          p.col.l12.m12.s12 Titulación
+          a(href="/administrador/generarDocumentos/asignacionSinodales", class="secondary-content")
+            i.material-icons.icon-brown send
+        li.collection-item.avatar
+          i.material-icons.circle.green description
+          span#titulo1.title.col.l12.m12.s11 Carta de Liberación de Actividades Académicas
+          p.col.l12.m12.s12 Cartas de Liberación
+          a(href="/administrador/generarDocumentos/liberacionActAcademicas", class="secondary-content")
+            i.material-icons.icon-brown send
