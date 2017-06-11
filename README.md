@@ -1,28 +1,17 @@
-# SistemaDocumentacionDig
+# Sistema de Gestión Documental Inteligente -SGDI
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0-rc.2.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
+El proyecto fue generado con  [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0-rc.2.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+`ng build`: comando para la construcción del proyecto, este es almacenado en la carpeta `dist/`. Utilizar el parámetro `-prod` para una compilación en producción.
 
-## Running unit tests
+## Development server
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+`npm run build`: comando para ejecución de la app en el servidor, compuesta de los comandos:`ng build && node server.js` 
+Ruta de navegegación:`http://localhost:3500/`.
 
-## Running end-to-end tests
+## Code scaffolding
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+`ng generate component component-name`: comando para generar un nuevo componente.
+También puede utilizarse: `ng generate directive/pipe/service/class/module`.
