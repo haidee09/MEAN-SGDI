@@ -1,0 +1,208 @@
+<section>
+  <div class="row l12">
+    <div class="card-panel indigo lighten-5 z-depth-5">
+      <h5 class="center flow-text">Reporte Final del Nivel del Desempeño de los Alumnos</h5>
+      <div class="row">
+        <div class="input-field col l6 s12">
+          <i class="material-icons prefix">reorder</i>
+          <input class="validate" type="text"
+          [(ngModel)]="folio" required>
+          <label for="txtFolio">Folio</label>
+        </div>
+      </div>
+      <form [formGroup]="formulario">
+        <div class="row">
+          <div class="input-field col l8 s12">
+            <i class="material-icons prefix">contacts</i>
+            <input formControlName="departamento" class="validate" id="txtDepartamento" type="text" placeholder="Departartamento de Sistemas y Computación">
+            <label for="txtDepartamento">Departamento de</label>
+          </div>
+          <div class="input-field col l1 s1"><i class="material-icons prefix">local_library</i></div>
+          <div class="input-field col l3 s11">
+              <label for="">Semestre</label><br>
+              <select class="indigo lighten-5 browser-default" formControlName="semestre">
+                <option disabled selected>Semestre</option>
+                <option value="Enero-Junio">Enero-Junio</option>
+                <option value="Agosto-Diciembre">Agosto-Diciembre</option>
+              </select>
+            </div>
+          <div class="input-field col s12">
+            <i class="material-icons prefix">person</i>
+            <input formControlName="docente" class="validate" id="profesor" type="text">
+            <label for="profesor">Profesor(a)</label></div>
+          <div class="input-field col l6 s12">
+            <i class="material-icons prefix">group_work</i>
+            <input formControlName="NGrupos" class="validate" id="NoGrupos" type="number" min="1" max="5">
+            <label for="NoGrupos">No.Grupos atendidos</label>
+          </div>
+          <div class="input-field col l6 s12">
+            <i class="material-icons prefix">assignment</i>
+            <input formControlName="NAsignaturas" class="validate" id="NoAsignaturas" type="number" min="1" max="5">
+            <label for="NoAsignaturas">No.Asignaturas diferentes</label>
+          </div>
+          <div class="row">
+            <div class="col s12 m11 l12 input-field">
+              <table class="responsive-table bordered">
+              <thead>
+                <tr>
+                  <th data-field="id">Asignatura</th>
+                  <th data-field="actividades">Carrera</th>
+                  <th data-field="a">A</th>
+                  <th data-field="primeraOp">1a Op</th>
+                  <th data-field="segundaOp">2da Op</th>
+                  <th data-field="c">C</th>
+                  <th></th>
+                  <th data-field="d">D</th>
+                  <th></th>
+                  <th data-field="e">E</th>
+                  <th data-field="f">F</th>
+                  <th data-field="g">G</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><input formControlName="asignatura1" class="validate" id="asignatura1" name="fila1" type="text"><label for="asignatura1"></label></td>
+                  <td><input formControlName="carrera1" class="validate" id="carrera1" name="fila1" type="text"><label for="carrera1"></label></td>
+                  <td><input formControlName="A1" class="validate" id="A1" name="fila1" type="number" min="0" max="100"><label for="A1"></label></td>
+                  <td><input formControlName="B11" class="validate" id="B11" name="fila1" type="number" min="0" max="100"><label for="B11"></label></td>
+                  <td><input formControlName="B12" class="validate" id="B21" name="fila1" type="number" min="0" max="100"><label for="B21"></label></td>
+                  <td><input formControlName="C1" class="validate" id="C1" name="fila1" type="number" min="0" max="100"><label for="C1"></label></td>
+                  <td><input formControlName="D11" class="validate" id="D11" name="fila1" type="number" min="0" max="100"><label for="D11"></label></td>
+                  <td><input formControlName="D12" class="validate" id="D21" name="fila1" type="number" min="0" max="100"><label for="D21"></label></td>
+                  <td><input formControlName="E1" class="validate" id="E1" name="fila1" type="number" min="0" max="100"><label for="E1"></label></td>
+                  <td><input formControlName="F1" class="validate" id="F1" name="fila1" type="number" min="0" max="100"><label for="F1"></label></td>
+                  <td><input formControlName="G1" class="validate" id="G1" name="fila1" type="number" min="0" max="100"><label for="G1"></label></td>
+                </tr>
+                <tr>
+                  <td><input formControlName="asignatura2" class="validate" id="asignatura2" name="fila2" type="text"><label for="asignatura2"></label></td>
+                  <td><input formControlName="carrera2" class="validate" id="carrera2" name="fila2" type="text"><label for="carrera2"></label></td>
+                  <td><input formControlName="A2" class="validate" id="A2" name="fila2" type="number" min="0" max="100"><label for="A2"></label></td>
+                  <td><input formControlName="B21" class="validate" id="B12" name="fila2" type="number" min="0" max="100"><label for="B12"></label></td>
+                  <td><input formControlName="B22" class="validate" id="B22" name="fila2" type="number" min="0" max="100"><label for="B21"></label></td>
+                  <td><input formControlName="C2" class="validate" id="C2" name="fila2" type="number" min="0" max="100"><label for="C2"></label></td>
+                  <td><input formControlName="D21" class="validate" id="D12" name="fila2" type="number" min="0" max="100"><label for="D12"></label></td>
+                  <td><input formControlName="D22" class="validate" id="D22" name="fila2" type="number" min="0" max="100"><label for="D21"></label></td>
+                  <td><input formControlName="E2" class="validate" id="E2" name="fila2" type="number" min="0" max="100"><label for="E2"></label></td>
+                  <td><input formControlName="F2" class="validate" id="F2" name="fila2" type="number" min="0" max="100"><label for="F2"></label></td>
+                  <td><input formControlName="G2" class="validate" id="G2" name="fila2" type="number" min="0" max="100"><label for="G2"></label></td>
+                </tr>
+                <tr>
+                  <td><input formControlName="asignatura3" class="validate" id="asignatura3" name="fila3" type="text"><label for="asignatura3"></label></td>
+                  <td><input formControlName="carrera3" class="validate" id="carrera3" name="fila3" type="text"><label for="carrera3"></label></td>
+                  <td><input formControlName="A3" class="validate" id="A3" name="fila3" type="number" min="0" max="100"><label for="A3"></label></td>
+                  <td><input formControlName="B31" class="validate" id="B13" name="fila3" type="number" min="0" max="100"><label for="B13"></label></td>
+                  <td><input formControlName="B32" class="validate" id="B23" name="fila3" type="number" min="0" max="100"><label for="B23"></label></td>
+                  <td><input formControlName="C3" class="validate" id="C3" name="fila3" type="number" min="0" max="100"><label for="C3"></label></td>
+                  <td><input formControlName="D31" class="validate" id="D13" name="fila3" type="number" min="0" max="100"><label for="D13"></label></td>
+                  <td><input formControlName="D32" class="validate" id="D23" name="fila3" type="number" min="0" max="100"><label for="D23"></label></td>
+                  <td><input formControlName="E3" class="validate" id="E3" name="fila3" type="number" min="0" max="100"><label for="E3"></label></td>
+                  <td><input formControlName="F3" class="validate" id="F3" name="fila3" type="number" min="0" max="100"><label for="F3"></label></td>
+                  <td><input formControlName="G3" class="validate" id="G3" name="fila3" type="number" min="0" max="100"><label for="G3"></label></td>
+                </tr>
+                <tr>
+                  <td><input formControlName="asignatura4" class="validate" id="asignatura4" name="fila4" type="text"><label for="asignatura2"></label></td>
+                  <td><input formControlName="carrera4" class="validate" id="carrera4" name="fila4" type="text"><label for="carrera2"></label></td>
+                  <td><input formControlName="A4" class="validate" id="A4" name="fila4" type="number" min="0" max="100"><label for="A4"></label></td>
+                  <td><input formControlName="B41" class="validate" id="B14" name="fila4" type="number" min="0" max="100"><label for="B14"></label></td>
+                  <td><input formControlName="B42" class="validate" id="B24" name="fila4" type="number" min="0" max="100"><label for="B24"></label></td>
+                  <td><input formControlName="C4" class="validate" id="C4" name="fila4" type="number" min="0" max="100"><label for="C4"></label></td>
+                  <td><input formControlName="D41" class="validate" id="D14" name="fila4" type="number" min="0" max="100"><label for="D14"></label></td>
+                  <td><input formControlName="D42" class="validate" id="D24" name="fila4" type="number" min="0" max="100"><label for="D24"></label></td>
+                  <td><input formControlName="E4" class="validate" id="E4" name="fila4" type="number" min="0" max="100"><label for="E4"></label></td>
+                  <td><input formControlName="F4" class="validate" id="F4" name="fila4" type="number" min="0" max="100"><label for="F4"></label></td>
+                  <td><input formControlName="G4" class="validate" id="G4" name="fila4" type="number" min="0" max="100"><label for="G4"></label></td>
+                </tr>
+                <tr>
+                  <td><input formControlName="asignatura5" class="validate" id="asignatura5" name="fila5" type="text"><label for="asignatura5"></label></td>
+                  <td><input formControlName="carrera5" class="valdidate" id="carrera5" name="fila5" type="text"><label for="carrera5"></label></td>
+                  <td><input formControlName="A5" class="validate" id="A5" name="fila5" type="number" min="0" max="100"><label for="A5"></label></td>
+                  <td><input formControlName="B51" class="validate" id="B15" name="fila5" type="number" min="0" max="100"><label for="B15"></label></td>
+                  <td><input formControlName="B52" class="validate" id="B25" name="fila5" type="number" min="0" max="100"><label for="B25"></label></td>
+                  <td><input formControlName="C5" class="validate" id="C5" name="fila5" type="number" min="0" max="100"><label for="C5"></label></td>
+                  <td><input formControlName="D51" class="validate" id="D15" name="fila5" type="number" min="0" max="100"><label for="D15"></label></td>
+                  <td><input formControlName="D52" class="validate" id="D25" name="fila5" type="number" min="0" max="100"><label for="D25"></label></td>
+                  <td><input formControlName="E5" class="validate" id="E5" name="fila5" type="number" min="0" max="100"><label for="E5"></label></td>
+                  <td><input formControlName="F5" class="validate" id="F5" name="fila5" type="number" min="0" max="100"><label for="F5"></label></td>
+                  <td><input formControlName="G5" class="validate" id="G5" name="fila5" type="number" min="0" max="100"><label for="G5"></label></td>
+                </tr>
+                <tr>
+                  <td><input formControlName="asignatura6" class="validate" id="asignatura6" name="fila6" type="text"><label for="asignatura6"></label></td>
+                  <td><input formControlName="carrera6" class="validate" id="carrera6" name="fila6" type="text"><label for="carrera6"></label></td>
+                  <td><input formControlName="A6" class="validate" id="A6" name="fila6" type="number" min="0" max="100"><label for="A6"></label></td>
+                  <td><input formControlName="B61" class="validate" id="B16" name="fila6" type="number" min="0" max="100"><label for="B16"></label></td>
+                  <td><input formControlName="B62" class="validate" id="B26" name="fila6" type="number" min="0" max="100"><label for="B26"></label></td>
+                  <td><input formControlName="C6" class="validate" id="C6" name="fila6" type="number" min="0" max="100"><label for="C6"></label></td>
+                  <td><input formControlName="D61" class="validate" id="D16" name="fila6" type="number" min="0" max="100"><label for="D16"></label></td>
+                  <td><input formControlName="D62" class="validate" id="D26" name="fila6" type="number" min="0" max="100"><label for="D26"></label></td>
+                  <td><input formControlName="E6" class="validate" id="E6" name="fila6" type="number" min="0" max="100"><label for="E6"></label></td>
+                  <td><input formControlName="F6" class="validate" id="F6" name="fila6" type="number" min="0" max="100"><label for="F6"></label></td>
+                  <td><input formControlName="G6" class="validate" id="G6" name="fila6" type="number" min="0" max="100"><label for="G6"></label></td>
+                </tr>
+                <tr>
+                  <td>TOTALES</td>
+                  <td><input formControlName="asignaturasTotales" class="validate" id="asignaturatotales" name="totales1" type="text"><label for="asignaturatotales"></label></td>
+                  <td><input formControlName="carrerasTotales" class="validate" id="carreratotales" name="totales1" type="text"><label for="carreratotales"></label></td>
+                  <td><input formControlName="ATotales" class="validate" id="Atotales" name="totales1" type="number" min="0" max="100"><label for="Atotales"></label></td>
+                  <td><input formControlName="B1Totales" class="validate" id="B1totales" name="totales1" type="number" min="0" max="100"><label for="B1totales"></label></td>
+                  <td><input formControlName="B2Totales" class="validate" id="B2totales" name="totales1" type="number" min="0" max="100"><label for="B2totales"></label></td>
+                  <td><input formControlName="CTotales" class="validate" id="Ctotales" name="totales1" type="number" min="0" max="100"><label for="Ctotales"></label></td>
+                  <td><input formControlName="D1Totales" class="validate" id="Dtotales" name="totales1" type="number" min="0" max="100"><label for="Dtotales"></label></td>
+                  <td><input formControlName="D2Totales" class="validate" id="Dtotales" name="totales1" type="number" min="0" max="100"><label for="Dtotales"></label></td>
+                  <td><input formControlName="ETotales" class="validate" id="Etotales" name="totales1" type="number" min="0" max="100"><label for="Etotales"></label></td>
+                  <td><input formControlName="FTotales" class="validate" id="Ftotales" name="totales1" type="number" min="0" max="100"><label for="Ftotales"></label></td>
+                  <td><input formControlName="GTotales" class="validate" id="Gtotales" name="totales1" type="number" min="0" max="100"><label for="Gtotales"></label></td>
+                </tr>
+              </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="input-field col s12">
+            <i class="material-icons prefix">person</i>
+            <input formControlName="nombreFirmaDocente" class="validate" id="nombreFirmaDocente" type="text">
+            <label for="nombreFirmaDocente">Nombre y Firma del Docente</label>
+          </div>
+          <div class="input-field col s12">
+            <i class="material-icons prefix">contacts</i>
+            <input formControlName="nombreFirmaJefe" class="validate" id="nombreFirmaJefe" type="text">
+            <label for="nombreFirmaJefe">Nombre y Firma del Jefe de Área Académica</label>
+          </div>
+        </div>
+        <div class="row hide-on-med-and-down">
+          <div class="input-field right-align col l12">
+            <button (click)="regresarPag()" class="btn waves-effect green darken-4"
+              type="submit" name="action"> Cancelar
+              <i class="material-icons right">reply</i>
+            </button>
+            <button (click)="generarPDF()"
+              class="btn waves-effect green darken-3"
+              type="submit" name="action"> Generar PDF
+              <i class="material-icons right">note_add</i>
+            </button>
+          </div>
+        </div>
+        <div class="row hide-on-large-only">
+          <div class="input-field right-align fixed-action-btn horizontal">
+            <a class="btn-floating btn-large green darken-1">
+              <i class="large material-icons">done_all</i></a>
+            <ul>
+              <li>
+                <button (click)="regresarPag()"
+                  class="btn-floating deep-orange lighten-1 yellow darken-1"
+                  type="submit" name="action">
+                  <i class="material-icons right">reply</i>
+                </button>
+              </li>
+              <li>
+                <button (click)="generarPDF()"
+                  class="btn-floating orange darken-1"
+                  type="submit" name="action">
+                  <i class="material-icons right">note_add</i>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

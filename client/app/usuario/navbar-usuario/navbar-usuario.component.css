@@ -1,0 +1,7 @@
+nav .brand-logo{
+  padding-left: 2%;
+}
+.active-link {
+  color:#000000;
+  background-color: #43a047;
+}

@@ -1,0 +1,90 @@
+<div class="container">
+  <div class="card-panel indigo lighten-5 z-depth-5">
+    <h5 class="center flow-text">Asignación de Sinodales</h5>
+    <div class="row">
+      <div class="input-field col l6 s12">
+        <i class="material-icons prefix">reorder</i>
+        <input class="validate" type="text" [(ngModel)]="folio">
+        <label for="folio">Folio</label>
+      </div>
+      <div class="input-field col l6 s12">
+        <i class="material-icons prefix">today</i>
+        <input type="date" class="datepicker" [ngModel] ="campoFecha | date:'yyyy-MM-dd'" (ngModelChange)="campoFecha = $event" name="campoFecha">
+      </div>
+  </div>
+  <form [formGroup]="formulario" class="col s12">
+    <div class="row">
+        <div class="input-field col l6 s12"><i class="material-icons prefix">contacts</i><input formControlName="jefeSistemas" class="validate" type="text"><label for="txtJefeDepartamento">Jefe de Departamento de Sistemas</label></div>
+        <div class="input-field col l6 s12"><i class="material-icons prefix">contacts</i><input formControlName="jefeDivision" class="validate" type="text"><label for="txtJefeDivision">Jefe de División de Estudios</label></div>
+        <div class="input-field col l8 s12"><i class="material-icons prefix">school</i><input formControlName="tipoTitulacion" class="validate" type="text"><label for="txtTipoTitulacion">Tipo de titulación</label></div>
+        <div class="input-field col l6 s12"><i class="material-icons prefix">person</i><input formControlName="nombreAlumno" class="validate" type="text"><label for="txtNombreAlumno">Nombre del alumno</label></div>
+        <div class="input-field col l6 s12"><i class="material-icons prefix">local_library</i><input formControlName="carrera" class="validate" type="text"><label for="txtCarrera">Carrera</label></div>
+      </div>
+  </form>
+  <div class="input-field col l6 s12">
+        <i class="material-icons prefix">today</i>
+        <input type="date" class="datepicker" [ngModel] ="campoFecha2 | date:'yyyy-MM-dd'" (ngModelChange)="campoFecha2 = $event" name="campoFecha2">
+      </div>
+  <form [formGroup]="formulario2" class="col s12">
+      <h6 class="center flow-text">Datos presidente</h6>
+      <div class="row">
+        <div class="input-field col s12"><i class="material-icons prefix">contacts</i><input formControlName="nombrePresidente" class="validate" type="text"><label for="txtNombreDocente">Nombre del docente</label></div>
+        <div class="input-field col l6 s12"><i class="material-icons prefix">grade</i><input formControlName="gradoPresidente" class="validate" type="text"><label for="txtGradoAcademico">Grado académico</label></div>
+        <div class="input-field col l6 s12"><i class="material-icons prefix"> graphic_eq</i><input formControlName="cedulaPresidente" class="validate" type="text"><label for="txtCedula">Cédula profesional</label></div>
+      </div>
+      <h6 class="center flow-text">Datos Secretario</h6>
+      <div class="row">
+        <div class="input-field col s12"><i class="material-icons prefix">contacts</i><input formControlName="nombreSecretario" class="validate" type="text"><label for="txtNombreDocente">Nombre del docente</label></div>
+        <div class="input-field col l6 s12"><i class="material-icons prefix">grade</i><input formControlName="gradoSecretario" class="validate" type="text"><label for="txtGradoAcademico">Grado académico</label></div>
+        <div class="input-field col l6 s12"><i class="material-icons prefix">graphic_eq</i><input formControlName="cedulaSecretario" class="validate" type="text"><label for="txtCedula">Cédula profesional</label></div>
+      </div>
+      <h6 class="center flow-text">Datos Vocal</h6>
+      <div class="row">
+        <div class="input-field col s12"><i class="material-icons prefix">contacts</i><input formControlName="nombreVocal" class="validate" type="text"><label for="txtNombreDocente">Nombre del docente</label></div>
+        <div class="input-field col l6 s12"><i class="material-icons prefix">grade</i><input formControlName="gradoVocal" class="validate" type="text"><label for="txtGradoAcademico">Grado académico</label></div>
+        <div class="input-field col l6 s12"><i class="material-icons prefix"></i><input formControlName="cedulaVocal" class="validate" type="text"><label for="txtCedula">Cédula profesional</label></div>
+      </div>
+      <h6 class="center flow-text">Datos Suplente</h6>
+      <div class="row">
+        <div class="input-field col s12"><i class="material-icons prefix">contacts</i><input formControlName="nombreSuplente" class="validate" type="text"><label for="txtNombreDocente">Nombre del docente</label></div>
+        <div class="input-field col l6 s12"><i class="material-icons prefix">grade</i><input formControlName="gradoSuplente" class="validate" type="text"><label for="txtGradoAcademico">Grado académico</label></div>
+        <div class="input-field col l6 s12"><i class="material-icons prefix">graphic_eq</i><input formControlName="cedulaSuplente" class="validate" type="text"><label for="txtCedula">Cédula profesional</label></div>
+      </div>
+      <div class="row hide-on-med-and-down">
+        <div class="input-field right-align col l12">
+          <button (click)="regresarPag()" class="btn waves-effect green darken-4"
+            type="submit" name="action"> Cancelar
+            <i class="material-icons right">reply</i>
+          </button>
+          <button (click)="generarPDF()"
+            class="btn waves-effect green darken-3"
+            type="submit" name="action"> Generar PDF
+            <i class="material-icons right">note_add</i>
+          </button>
+        </div>
+      </div>
+      <div class="row hide-on-large-only">
+        <div class="input-field right-align fixed-action-btn horizontal">
+          <a class="btn-floating btn-large green darken-1">
+            <i class="large material-icons">done_all</i>
+          </a>
+          <ul>
+            <li>
+              <button (click)="regresarPag()" class="btn waves-effect green darken-4"
+                type="submit" name="action">
+                <i class="material-icons right">reply</i>
+              </button>
+            </li>
+            <li>
+              <button (click)="generarPDF()"
+                class="btn waves-effect green darken-3"
+                type="submit" name="action">
+                <i class="material-icons right">note_add</i>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

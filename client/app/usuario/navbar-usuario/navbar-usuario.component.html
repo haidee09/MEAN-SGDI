@@ -1,0 +1,32 @@
+<div class="green darken-2 col s12">
+  <div class="row">
+    <nav class="green darken-2 col l12">
+      <div class="nav-wrapper container" id="navegacion">
+        <a class="brand-logo" href="#"><h4>Usuario</h4></a>
+
+        <ul class="right hide-on-med-and-down">
+          <li class="active">
+            <a routerLink="/usuario/inicio" routerLinkActive="active-link">Inicio
+              <i class="material-icons left">home</i></a>
+          </li>
+          <li>
+            <a (click)="cerrarSesion()">Cerrar Sesión
+              <i class="material-icons left">lock</i></a>
+          </li>
+        </ul>
+        <ul class="side-nav lime lighten-4" id="mobile-demo">
+          <li class="active">
+            <a routerLink="/usuario/inicio" routerLinkActive="active-link">Inicio
+              <i class="material-icons left">home</i></a>
+          </li>
+          <li>
+            <a (click)="cerrarSesion()">Cerrar Sesión
+              <i class="material-icons left">lock</i></a>
+          </li>
+        </ul>
+        <a class="button-collapse" href="#" data-activates="mobile-demo">
+        <i class="material-icons">menu</i></a>
+      </div>
+    </nav>
+  </div>
+</div>

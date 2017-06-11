@@ -1,0 +1,171 @@
+<div class="container">
+  <div class="card-panel indigo lighten-5 z-depth-5">
+    <h5 class="center flow-text">Carta de Liberación de Actividades Académicas</h5>
+    <div class="row">
+      <div class="input-field col l4 s12">
+        <i class="material-icons prefix">reorder</i>
+        <input class="validate" type="text"
+        [(ngModel)]="folio" required>
+        <label for="txtFolio">Folio</label>
+      </div>
+      <div class="input-field col l4 s12">
+        <i class="material-icons prefix">today</i>
+        <input type="date" class="datepicker" [ngModel] ="campoFecha | date:'yyyy-MM-dd'" (ngModelChange)="campoFecha = $event" name="campoFecha">
+      </div>
+      <div class="input-field col l4 s12">
+        <i class="material-icons prefix">place</i>
+        <input class="validate" type="text" [(ngModel)]="lugar">
+        <label for="lugar">Lugar</label>
+      </div>
+  </div>
+  <form [formGroup]="formulario" class="col s12">
+    <div class="row">
+      <div class="input-field col l6 s12"><i class="material-icons prefix">business</i><input formControlName="departamento" class="validate" type="text"><label for="txtDepartamento">Departamento académico</label></div>
+      <div class="input-field col l6 s12"><i class="material-icons prefix">contacts</i><input formControlName="nombreDocente" class="validate" type="text"><label for="txtNombreDocente">Nombre del docente</label></div>
+      <div class="input-field col l1 s1"><i class="material-icons prefix">playlist_add</i></div>
+          <div class="input-field col l3 s11">
+            <label for="">Semestre</label><br>
+            <select class="indigo lighten-5 browser-default" formControlName="semestre">
+              <option disabled selected>Semestre</option>
+              <option value="Enero-Junio">Enero-Junio</option>
+              <option value="Agosto-Diciembre">Agosto-Diciembre</option>
+            </select>
+          </div>
+    </div>
+    <div class="row">
+      <div class="col s12 m11 l12">
+        <table class="responsive-table">
+          <thead>
+            <tr>
+              <th class="data-field" id="Actividades">Actividades</th>
+              <th class="data-field" id="Si">S</th>
+              <th class="data-field" id="No">N</th>
+              <th class="data-field" id="NA">N/A</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Asistencia a reuniones convocadas</td>
+              <td><input type="radio" class="with-gap" name="uno" id="unoSi" (click)="valorSI1()"><label for="unoSi"></label></td>
+              <td><input type="radio" class="with-gap" name="uno" id="unoNo" (click)="valorNO1()"><label for="unoNo"></label></td>
+              <td><input type="radio" class="with-gap" name="uno" id="unoNA" (click)="valorNA1()"><label for="unoNA"></label></td>
+            </tr>
+            <tr>
+              <td>Participación en programas de formación y actualización docente</td>
+              <td><input type="radio" class="with-gap" name="dos" id="dosSI" (click)="valorSI2()"><label for="dosSI"></label></td>
+              <td><input type="radio" class="with-gap" name="dos" id="dosNO" (click)="valorNO2()"><label for="dosNO"></label></td>
+              <td><input type="radio" class="with-gap" name="dos" id="dosNA" (click)="valorNA2()"><label for="dosNA"></label></td>
+            </tr>
+            <tr>
+              <td>Asesorías en procesos de titulación integral encomendadas</td>
+              <td><input type="radio" class="with-gap" name="tres" id="tresSI" (click)="valorSI3()"><label for="tresSI"></label></td>
+              <td><input type="radio" class="with-gap" name="tres" id="tresNO" (click)="valorNO3()"><label for="tresNO"></label></td>
+              <td><input type="radio" class="with-gap" name="tres" id="tresNA" (click)="valorNA3()"><label for="tresNA"></label></td>
+            </tr>
+            <tr>
+              <td>Propuestas de mejoras en la operación de programas y proyectos académicos</td>
+              <td><input type="radio" class="with-gap" name="cuatro" id="cuatroSI" (click)="valorSI4()"><label for="cuatroSI"></label></td>
+              <td><input type="radio" class="with-gap" name="cuatro" id="cuatroNO" (click)="valorNO4()"><label for="cuatroNO"></label></td>
+              <td><input type="radio" class="with-gap" name="cuatro" id="cuatroNA" (click)="valorNA4()"><label for="cuatroNA"></label></td>
+            </tr>
+            <tr>
+              <td>Sinodales en protocolos de titulación</td>
+              <td><input type="radio" class="with-gap" name="cinco" id="cincoSI" (click)="valorSI5()"><label for="cincoSI"></label></td>
+              <td><input type="radio" class="with-gap" name="cinco" id="cincoNO" (click)="valorNO5()"><label for="cincoNO"></label></td>
+              <td><input type="radio" class="with-gap" name="cinco" id="cincoNA" (click)="valorNA5()"><label for="cincoNA"></label></td>
+            </tr>
+            <tr>
+              <td>Participación en eventos de la academia</td>
+              <td><input type="radio" class="with-gap" name="seis" id="seisSI" (click)="valorSI6()"><label for="seisSI"></label></td>
+              <td><input type="radio" class="with-gap" name="seis" id="seisNO" (click)="valorNO6()"><label for="seisNO"></label></td>
+              <td><input type="radio" class="with-gap" name="seis" id="seisNA" (click)="valorNA6()"><label for="seisNA"></label></td>
+            </tr>
+            <tr>
+              <td>Contribución con propuestas de mejora en los planes y programas de estudio</td>
+              <td><input type="radio" class="with-gap" name="siete" id="sieteSI" (click)="valorSI7()"><label for="sieteSI"></label></td>
+              <td><input type="radio" class="with-gap" name="siete" id="sieteNO" (click)="valorNO7()"><label for="sieteNO"></label></td>
+              <td><input type="radio" class="with-gap" name="siete" id="sieteNA" (click)="valorNA7()"><label for="sieteNA"></label></td>
+            </tr>
+            <tr>
+              <td>Desarrollo de materiales de apoyo didáctico</td>
+              <td><input type="radio" class="with-gap" name="ocho" id="ochoSI" (click)="valorSI8()"><label for="ochoSI"></label></td>
+              <td><input type="radio" class="with-gap" name="ocho" id="ochoNO" (click)="valorNO8()"><label for="ochoNO"></label></td>
+              <td><input type="radio" class="with-gap" name="ocho" id="ochoNA" (click)="valorNA8()"><label for="ochoNA"></label></td>
+            </tr>
+            <tr>
+              <td>Propuesta para bancos de proyectos</td>
+              <td><input type="radio" class="with-gap" name="nueve" id="nueveSI" (click)="valorSI9()"><label for="nueveSI"></label></td>
+              <td><input type="radio" class="with-gap" name="nueve" id="nueveNO" (click)="valorNO9()"><label for="nueveNO"></label></td>
+              <td><input type="radio" class="with-gap" name="nueve" id="nueveNA" (click)="valorNA9()"><label for="nueveNA"></label></td>
+            </tr>
+            <tr>
+              <td>Asesorías académicas</td>
+              <td><input type="radio" class="with-gap" name="diez" id="diezSI" (click)="valorSI10()"><label for="diezSI"></label></td>
+              <td><input type="radio" class="with-gap" name="diez" id="diezNO" (click)="valorNO10()"><label for="diezNO"></label></td>
+              <td><input type="radio" class="with-gap" name="diez" id="diezNA" (click)="valorNA10()"><label for="diezNA"></label></td>
+            </tr>
+            <tr>
+              <td>Tutoría</td>
+              <td><input type="radio" class="with-gap" name="once" id="onceSI" (click)="valorSI11()"><label for="onceSI"></label></td>
+              <td><input type="radio" class="with-gap" name="once" id="onceNO" (click)="valorNO11()"><label for="onceNO"></label></td>
+              <td><input type="radio" class="with-gap" name="once" id="onceNA" (click)="valorNA11()"><label for="onceNA"></label></td>
+            </tr>
+            <tr>
+              <td>Participación en comisiones académicas</td>
+              <td><input type="radio" class="with-gap" name="doce" id="doceSI" (click)="valorSI12()"><label for="doceSI"></label></td>
+              <td><input type="radio" class="with-gap" name="doce" id="doceNO" (click)="valorNO12()"><label for="doceNO"></label></td>
+              <td><input type="radio" class="with-gap" name="doce" id="doceNA" (click)="valorNA12()"><label for="doceNA"></label></td>
+            </tr>
+            <tr>
+              <td>Otros</td>
+              <td><input type="radio" class="with-gap" name="trece" id="treceSI" (click)="valorSI13()"><label for="treceSI"></label></td>
+              <td><input type="radio" class="with-gap" name="trece" id="treceNO" (click)="valorNO13()"><label for="treceNO"></label></td>
+              <td><input type="radio" class="with-gap" name="trece" id="treceNA" (click)="valorNA13()"><label for="treceNA"></label></td>
+            </tr>
+            <tr>
+              <td>¿Cumplio con las actividades academicas encomendadas al 100%?</td>
+              <td><input type="radio" class="with-gap" name="catorce" id="catorceSI" (click)="valorSI14()"><label for="catorceSI"></label></td>
+              <td><input type="radio" class="with-gap" name="catorce" id="catorceNO" (click)="valorNO14()"><label for="catorceNO"></label></td>
+              <td><input type="radio" class="with-gap" name="catorce" id="catorceNA" (click)="valorNA14()"><label for="catorceNA"></label></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="input-field col s12"><i class="material-icons prefix">account_box</i><input formControlName="jefeDepartamento" class="validate" type="text"><label for="txtFirmaLiberacion1">Nombre y Firma del Jefe del Departamento</label></div>
+      <div class="input-field col s12"><i class="material-icons prefix">supervisor_account</i><input formControlName="presidenteAcademico" class="validate" type="text"><label for="txtFirmaLiberacion2">Nombre y Firma del Presidente Académico</label></div>
+    </div>
+  </form>
+  <div class="row hide-on-med-and-down">
+    <div class="input-field right-align col l12">
+      <button (click)="regresarPag()" class="btn waves-effect green darken-4"
+        type="submit" name="action"> Cancelar
+        <i class="material-icons right">reply</i>
+      </button>
+      <button (click)="generarPDF()"
+        class="btn waves-effect green darken-3"
+        type="submit" name="action"> Generar PDF
+        <i class="material-icons right">note_add</i>
+      </button>
+    </div>
+  </div>
+  <div class="row hide-on-large-only">
+    <div class="input-field right-align fixed-action-btn horizontal"><a class="btn-floating btn-large green darken-1"><i class="large material-icons">done_all</i></a>
+      <ul>
+        <li>
+          <button (click)="regresarPag()" class="btn waves-effect green darken-4"
+            type="submit" name="action">
+            <i class="material-icons right">reply</i>
+          </button>
+        </li>
+        <li>
+          <button (click)="generarPDF()"
+            class="btn waves-effect green darken-3"
+            type="submit" name="action">
+            <i class="material-icons right">note_add</i>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+  </div>
+</div>

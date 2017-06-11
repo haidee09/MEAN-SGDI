@@ -13,6 +13,9 @@ var userSchema = new Schema({
   },
   password: String,
   admin: Boolean
+},
+{
+  collection: 'usuarios'
 })
 userSchema.methods.generateHash = function(password) {
     return bcrypt.hashSync(password, bcrypt.genSaltSync(8), null);

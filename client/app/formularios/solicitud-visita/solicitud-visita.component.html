@@ -1,0 +1,158 @@
+<div class=" container">
+  <div class="card-panel indigo lighten-5 z-depth-5">
+      <h5 class="center flow-text">Solicitud de Visitas a Empresas</h5>
+      <div class="row">
+        <div class="input-field col l4 s12">
+          <i class="material-icons prefix">reorder</i>
+          <input class="validate" type="text"
+          [(ngModel)]="folio" required>
+          <label for="txtFolio">Folio</label>
+        </div>
+        <div class="input-field col l4 s12">
+          <i class="material-icons prefix">today</i>
+          <input type="date" class="datepicker" [ngModel] ="campoFecha | date:'yyyy-MM-dd'" (ngModelChange)="campoFecha = $event" name="campoFecha">
+        </div>
+        <div class="input-field col l1 s1">
+          <i class="material-icons prefix">local_library</i>
+        </div>
+        <div class="input-field col l3 s12">
+          <label for="">Periodo escolar</label><br>
+          <select class="indigo lighten-5 browser-default" [(ngModel)]="semestre">
+            <option disabled selected>Semestre</option>
+            <option value="Enero-Junio">Enero-Junio</option>
+            <option value="Agosto-Diciembre">Agosto-Diciembre</option>
+           </select>
+        </div>
+      </div>
+      <form [formGroup]="formulario" class="col s12">
+      <div class="row">
+        <div class="col s12 m11 l12 input-field">
+          <table class="responsive-table bordered">
+            <thead>
+              <tr>
+                <th data-field="numero">No.</th>
+                <th data-field="empresa-ciudad">Empresa / Ciudad</th>
+                <th data-field="area">Área a observar y objetivo</th>
+                <th data-field="fecha-turno">Fecha / Turno</th>
+                <th data-field="carrera">Carrera</th>
+                <th data-field="numAlumnos">No. de alumnos</th>
+                <th data-field="solicitante">Solicitante</th>
+                <th data-field="asignatura">Asignatura</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input formControlName="numero1" class="validate" type="number"></td>
+                <td><input formControlName="empresa1" class="validate" type="text"></td>
+                <td><input formControlName="area1" class="validate" type="text"></td>
+                <td><input formControlName="fechaTurno1" class="validate" type="text"></td>
+                <td><input formControlName="carrera1" class="validate" type="text"></td>
+                <td><input formControlName="grupo1" class="validate" type="number" maxlength="50" minlenght="0"></td>
+                <td><input formControlName="solicitante1" class="validate" type="text"></td>
+                <td><input formControlName="asignatura1" class="validate" type="text"></td>
+              </tr>
+              <tr>
+                <td><input formControlName="numero2" class="validate" type="number"></td>
+                <td><input formControlName="empresa2" class="validate" type="text"></td>
+                <td><input formControlName="area2" class="validate" type="text"></td>
+                <td><input formControlName="fechaTurno2" class="validate" type="text"></td>
+                <td><input formControlName="carrera2" class="validate" type="text"></td>
+                <td><input formControlName="grupo2" class="validate" type="number" maxlength="50" minlenght="0"></td>
+                <td><input formControlName="solicitante2" class="validate" type="text"></td>
+                <td><input formControlName="asignatura2" class="validate" type="text"></td>
+              </tr>
+              <tr>
+                <td><input formControlName="numero3" class="validate" type="number"></td>
+                <td><input formControlName="empresa3" class="validate" type="text"></td>
+                <td><input formControlName="area3" class="validate" type="text"></td>
+                <td><input formControlName="fechaTurno3" class="validate" type="text"></td>
+                <td><input formControlName="carrera3" class="validate" type="text"></td>
+                <td><input formControlName="grupo3" class="validate" type="number" maxlength="50" minlenght="0"></td>
+                <td><input formControlName="solicitante3" class="validate" type="text"></td>
+                <td><input formControlName="asignatura3" class="validate" type="text"></td>
+              </tr>
+              <tr>
+                <td><input formControlName="numero4" class="validate" type="number"></td>
+                <td><input formControlName="empresa4" class="validate" type="text"></td>
+                <td><input formControlName="area4" class="validate" type="text"></td>
+                <td><input formControlName="fechaTurno4" class="validate" type="text"></td>
+                <td><input formControlName="carrera4" class="validate" type="text"></td>
+                <td><input formControlName="grupo4" class="validate" type="number" maxlength="50" minlenght="0"></td>
+                <td><input formControlName="solicitante4" class="validate" type="text"></td>
+                <td><input formControlName="asignatura4" class="validate" type="text"></td>
+              </tr>
+              <tr>
+                <td><input formControlName="numero5" class="validate" type="number"></td>
+                <td><input formControlName="empresa5" class="validate" type="text"></td>
+                <td><input formControlName="area5" class="validate" type="text"></td>
+                <td><input formControlName="fechaTurno5" class="validate" type="text"></td>
+                <td><input formControlName="carrera5" class="validate" type="text"></td>
+                <td><input formControlName="grupo5" class="validate" type="number" maxlength="50" minlenght="0"></td>
+                <td><input formControlName="solicitante5" class="validate" type="text"></td>
+                <td><input formControlName="asignatura5" class="validate" type="text"></td>
+              </tr>
+              <tr>
+                <td><input formControlName="numero6" class="validate" type="number"></td>
+                <td><input formControlName="empresa6" class="validate" type="text"></td>
+                <td><input formControlName="area6" class="validate" type="text"></td>
+                <td><input formControlName="fechaTurno6" class="validate" type="text"></td>
+                <td><input formControlName="carrera6" class="validate" type="text"></td>
+                <td><input formControlName="grupo6" class="validate" type="number" maxlength="50" minlenght="0"></td>
+                <td><input formControlName="solicitante6" class="validate" type="text"></td>
+                <td><input formControlName="asignatura6" class="validate" type="text"></td>
+              </tr>
+              <tr>
+                <td><input formControlName="numero7" class="validate" type="number"></td>
+                <td><input formControlName="empresa7" class="validate" type="text"></td>
+                <td><input formControlName="area7" class="validate" type="text"></td>
+                <td><input formControlName="fechaTurno7" class="validate" type="text"></td>
+                <td><input formControlName="carrera7" class="validate" type="text"></td>
+                <td><input formControlName="grupo7" class="validate" type="number" maxlength="50" minlenght="0"></td>
+                <td><input formControlName="solicitante7" class="validate" type="text"></td>
+                <td><input formControlName="asignatura7" class="validate" type="text"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="right-align" id="boton-agregar"><a class="btn-floating btn-large waves-effect waves-light green darken-4"><i class="material-icons">add</i></a></div>
+      <div class="row">
+        <div class="input-field col l6 s12"><i class="material-icons prefix">person</i><input formControlName="jefeDepartamento" class="validate" type="text"><label for="txtJefeDepto">Nombre Jefe Depto. de Sistemas</label></div>
+      </div>
+        <div class="input-field col l6 s12"><i class="material-icons prefix">person</i><input formControlName="subdirectorAcademico" class="validate" type="text"><label for="txtSubAcademico">Nombre Subdirector Académico</label></div>
+        <div class="row hide-on-med-and-down">
+          <div class="input-field right-align col l12">
+            <button (click)="regresarPag()" class="btn waves-effect green darken-4"
+              type="submit" name="action"> Cancelar
+              <i class="material-icons right">reply</i>
+            </button>
+            <button (click)="generarPDF()"
+              class="btn waves-effect green darken-3"
+              type="submit" name="action"> Generar PDF
+              <i class="material-icons right">note_add</i>
+            </button>
+          </div>
+        </div>
+        <div class="row hide-on-large-only">
+            <div class="input-field right-align fixed-action-btn horizontal"><a class="btn-floating btn-large green darken-1"><i class="large material-icons">done_all</i></a>
+              <ul>
+                <li>
+                  <button (click)="regresarPag()"
+                    class="btn-floating deep-orange lighten-1 yellow darken-1"
+                    type="submit" name="action">
+                    <i class="material-icons right">reply</i>
+                  </button>
+                </li>
+                <li>
+                  <button (click)="generarPDF()"
+                    class="btn-floating orange darken-1"
+                    type="submit" name="action">
+                    <i class="material-icons right">note_add</i>
+                  </button>
+                </li>
+              </ul>
+            </div>
+      </div>
+    </form>
+  </div>
+</div>

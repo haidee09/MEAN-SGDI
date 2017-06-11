@@ -1,74 +1,58 @@
 var express = require('express');
 const http = require('http');
+//var cors = require('cors');
 var path = require('path');
 var logger = require('morgan');
-var cookieParser = require('cookie-parser');
+//var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
-var bcrypt = require('bcrypt-nodejs');
 var config = require('./config'); // get our config file
 var jwt  = require('jsonwebtoken'); // used to create, sign, and verify tokens
-
-var User   = require('./models/user'); // get our mongoose model
-var user = require('../http/controllers/user');
-var administrador = require('./routes/administrador');
-var usuario = require('./routes/usuario');
-
+var routes = require('./http/controllers/routes');
+//var doc = require('../http/controllers/document');
+var expressJwt = require('express-jwt');
+var jwt = require('jsonwebtoken');
 
 var app = express();
-
+mongoose.Promise = global.Promise;
 mongoose.connect(config.database);
-// view engine setup
-//app.set('views', path.join(__dirname, '../src'));
-//app.set('view engine', 'pug');
-
-// uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 
 app.use(logger('dev'));
+//app.use(cors());
 // Parsers for POST data
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, '../src/public')));
-app.use(express.static(path.join(__dirname, '../dist')));
+//app.use(cookieParser());
+app.use(express.static(path.join(__dirname, './../dist')));
 
 // Add headers
 app.use(function (req, res, next) {
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type,x-access-token');
-    res.setHeader('Access-Control-Allow-Credentials', true);
-    next();
+  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3500');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type,x-access-token');
+  res.setHeader('Access-Control-Allow-Credentials', true);
+  next();
 });
-
+// We are going to protect /api routes with JWT
+//app.use('/administador', expressJwt({secret: config.secret }));
+//app.use('/usuario', expressJwt({secret: config.secret}));
 // Set our api routes
-app.use('/', user);
-app.use('/register', user);
-app.use('/login', user);
+app.use('/', routes);
 
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, './../dist/index.html'));
+});
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
   var err = new Error('Not Found');
   err.status = 404;
   next(err);
 });
-app.use(bodyParser.urlencoded({ extended: false }));
-/**
- * Get port from environment and store in Express.
- // =======================
- // configuration =========
- // =======================
- */
-const port = process.env.PORT || '3000';// used to create, sign, and verify tokens
+/* Configuracion del puerto*/
+const port = process.env.PORT || '3500';// used to create, sign, and verify tokens
 app.set('port', port);
-
-/**
- * Create HTTP server.
- */
+/* Creacíon del servidor http */
 const server = http.createServer(app);
-/**
- * Listen on provided port, on all network interfaces.
- */
+/* Servidor en escucha de acuerdo al puerto especificado.*/
 server.listen(port, () => console.log(`MEAN APP running on localhost:${port}`));
+module.exports = app;

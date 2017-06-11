@@ -1,0 +1,72 @@
+<div class="row container">
+  <div class="card-panel indigo lighten-5 z-depth-5">
+    <h5 class="center flow-text">Constancia de Cumplimiento de Actividad Complementaria</h5>
+    <div class="row">
+      <div class="input-field col l6 s12">
+        <i class="material-icons prefix">reorder</i>
+        <input class="validate" type="text"
+        [(ngModel)]="folio" required>
+        <label for="txtFolio">Folio</label>
+      </div>
+    </div>
+    <form [formGroup]="formulario">
+      <div class="row">
+        <div class="input-field col l6 s12"><i class="material-icons prefix">contacts</i><input formControlName="jefeDepartamento" class="validate" type="text"><label for="txtJefeDepartamento">Jefe del departamento de Servicios Escolares</label></div>
+        <div class="input-field col l6 s12"><i class="material-icons prefix">business</i><input formControlName="departamento" class="validate" type="text"><label for="txtDepartamento">Departamento que suscribe</label></div>
+        <div class="input-field col l6 s12"><i class="material-icons prefix">person</i><input formControlName="nombreAlumno" class="validate" type="text"><label for="txtNombreAlumno">Nombre de alumno</label></div>
+        <div class="input-field col l6 s12"><i class="material-icons prefix">fingerprint</i><input formControlName="numeroControl" class="validate" type="text"><label for="txtNumeroControl">Numero de control</label></div>
+        <div class="input-field col l6 s12"><i class="material-icons prefix">local_library</i><input formControlName="carrera" class="validate" type="text"><label for="txtCarrera">Carrera</label></div>
+        <div class="input-field col l6 s12"><i class="material-icons prefix">extension</i><input formControlName="actividadComplementaria" class="validate" type="text"><label for="txtActividadComplementaria">Actividad Complementaria</label></div>
+        <div class="input-field col l6 s12"><i class="material-icons prefix">equalizer</i><input formControlName="nivelDesempeno" class="validate" type="text"><label for="txtNivelDesempeno">Nivel de desempeño</label></div>
+        <div class="input-field col l6 s12"><i class="material-icons prefix">playlist_add</i><input formControlName="valorNumerico" class="validate" type="text"><label for="txtValorNumerico">Valor numérico</label></div>
+        <div class="input-field col l1 s1"><i class="material-icons prefix">perm_contact_calendar</i></div>
+          <div class="input-field col l3 s11">
+            <label for="">Periodo</label><br>
+            <select class="indigo lighten-5 browser-default" formControlName="periodoEscolar">
+              <option disabled selected>Semestre</option>
+              <option value="Enero-Junio">Enero-Junio</option>
+              <option value="Agosto-Diciembre">Agosto-Diciembre</option>
+            </select>
+          </div>
+        <div class="input-field col l8 s12"><i class="material-icons prefix">book</i><input formControlName="valorCurricular"class="validate" type="text"><label for="txtValorCurricular">Valor curricular</label></div>
+        <div class="input-field col l4 s12"><i class="material-icons prefix">today</i><input formControlName="diaFecha"class="validate" type="number"><label for="diaFecha">Día</label></div>
+        <div class="input-field col l4 s12"><input formControlName="mesFecha"class="validate" type="text"><label for="mesFecha">Mes</label></div>
+        <div class="input-field col l4 s12"><input formControlName="anioFecha"class="validate" type="number"><label for="anioFecha">Año</label></div>
+        <div class="input-field col s12"><i class="material-icons prefix">account_box</i><input formControlName="jefeAcademia" class="validate" type="text"><label for="txtFirmaLiberacion1">Nombre y Firma del Jefe de Académia</label></div>
+        <div class="input-field col s12"><i class="material-icons prefix">supervisor_account</i><input formControlName="profesorResponsable" class="validate" type="text"><label for="txtFirmaLiberacion1">Nombre y Firma del Profesor responsable</label></div>
+      </div>
+    </form>
+     <div class="row hide-on-med-and-down">
+      <div class="input-field right-align col l12">
+        <button (click)="regresarPag()" class="btn waves-effect green darken-4"
+          name="action">
+          Cancelar<i class="material-icons right">reply</i>
+        </button>
+        <button (click)="generarPDF()"
+          class="btn waves-effect green darken-3"
+          type="submit" name="action">Generar PDF
+          <i class="material-icons right">note_add</i>
+        </button>
+      </div>
+      <div class="row hide-on-large-only">
+        <div class="input-field right-align fixed-action-btn horizontal"><a class="btn-floating btn-large green darken-1"><i class="large material-icons">done_all</i></a>
+          <ul>
+            <li>
+              <button (click)="regresarPag()"
+                class="btn-floating deep-orange lighten-1 yellow darken-1"
+                type="submit" name="action">
+                <i class="material-icons right">reply</i>
+              </button>
+            </li>
+            <li>
+              <button (click)="generarPDF()"
+                class="btn-floating orange darken-1"
+                type="submit" name="action">
+                <i class="material-icons right">note_add</i>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+  </div>
+</div>

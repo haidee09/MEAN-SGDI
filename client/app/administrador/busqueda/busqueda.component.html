@@ -1,0 +1,107 @@
+<div class="row container">
+  <div class="">
+    <h4 class="center" id="titulo-busqueda">Búsqueda de documentos por:</h4>
+  </div>
+  <div class="col l12 m12 s12">
+    <div class="col l6 m6 s12 brown lighten-1">
+        <form>
+          <div class="input-field">
+            <input id="filtro" type="search"
+            [(ngModel)]="documentosFilter.folio"
+            placeholder="Folio"
+            [ngModelOptions]="{standalone: true}" required>
+            <label class="label-icon" for="search">
+              <i class="material-icons">search</i>
+            </label>
+            <i class="material-icons">close</i>
+          </div>
+        </form>
+    </div>
+    <div class="col l6 m6 s12 brown lighten-1">
+        <form>
+          <div class="input-field">
+            <input id="filtro" type="search"
+            [(ngModel)]="documentosFilterThree.fecha"
+            placeholder="Fecha dd/mm/aaaa"
+            [ngModelOptions]="{standalone: true}" required>
+            <label class="label-icon" for="search">
+              <i class="material-icons">search</i>
+            </label>
+            <i class="material-icons">close</i>
+          </div>
+        </form>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col l12 m12 s12">
+  <div class="col l3 m4 hide-on-small-only">
+    <div class="collection with-header z-depth-1 hoverable">
+      <div class="collection-header">
+        <h6 class="center green-text text-darken-4" id="categoria">Selecciona Categoría</h6>
+      </div>
+      <a class="collection-item green-text text-darken-4 waves-effect waves-green" (click)="busquedaCategoria1()">Residencias Profesionales</a>
+      <a class="collection-item green-text text-darken-4 waves-effect waves-green" (click)="busquedaCategoria2()">Titulación</a>
+      <a class="collection-item green-text text-darken-4 waves-effect waves-green" (click)="busquedaCategoria3()">Servicio Social</a>
+      <a class="collection-item green-text text-darken-4 waves-effect waves-green" (click)="busquedaCategoria5()">Solicitudes</a>
+      <a class="collection-item green-text text-darken-4 waves-effect waves-green" (click)="busquedaCategoria6()">Constancias</a>
+      <a class="collection-item green-text text-darken-4 waves-effect waves-green" (click)="todasCategorias()">Todas</a>
+    </div>
+  <!--  <div>
+      <blockquote>
+        <p class="flow-text teal-text text-darken-4">Calendario</p>
+      </blockquote>
+      <div class="input-field col l12"><i class="material-icons prefix">today</i>
+        <input class="datepicker" type="date" placeholder="Ingresa la fecha de búsqueda">
+      </div>
+    </div>-->
+  </div>
+  <div class="col l9 m8 s12" *ngIf="check" >
+      <div class="row">
+        <div class="col s12 m12 l12 card-panel z-depth-1 hoverable">
+          <ul class="collection with-header">
+            <li class="collection-header">
+              <h5 class="center" id="titulo-busqueda">Documentos Generados</h5>
+            </li>
+            <li class="collection-item avatar"
+              *ngFor="let documento of documentos | filterBy: documentosFilter | filterBy: documentosFilterTwo |filterBy: documentosFilterThree |paginate: { itemsPerPage: 5, currentPage: p } ">
+              <i class="material-icons circle green">folder_shared</i>
+              <span class="title">
+                <strong>{{documento.folio}}</strong>
+              </span>
+              <p>{{documento.tipo}}<br>{{documento.categoria}}</p>
+              <p class="secondary-content">{{documento.fecha}}, {{documento.hora}}</p>
+            </li>
+          </ul>
+          <div class="center">
+            <pagination-controls (pageChange)="p = $event" previousLabel="Anterior" nextLabel="Última"></pagination-controls>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <div class="col l9 m8 s12" *ngIf="!check">
+      <div class="row">
+        <div class="col s12 m12 l12 card-panel z-depth-1 hoverable">
+          <ul class="collection with-header">
+            <li class="collection-header">
+              <h5 class="center" id="titulo-busqueda">Documentos Generados</h5>
+            </li>
+            <li class="collection-item avatar"
+              *ngFor="let documento of documentos | filterBy: documentosFilter | filterBy: documentosFilterThree | paginate: { itemsPerPage: 5, currentPage: p }">
+              <i class="material-icons circle green">folder_shared</i>
+              <span class="title">
+                <strong>{{documento.folio}}</strong>
+              </span>
+              <p>{{documento.tipo}}<br>{{documento.categoria}}</p>
+              <p class="secondary-content">{{documento.fecha}}, {{documento.hora}}</p>
+            </li>
+          </ul>
+          <div class="center">
+            <pagination-controls (pageChange)="p = $event" previousLabel="Anterior" nextLabel="Última"></pagination-controls>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+</div>

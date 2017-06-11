@@ -1,0 +1,55 @@
+/* label color */
+
+.input-field label {
+  color: #bdbdbd;
+}
+
+/* label focus color */
+
+[type="radio"].with-gap:checked+label:before,[type="radio"].with-gap:checked+label:after{
+  border-radius: 50%;
+  border: 2px solid #B57F50;
+}
+[type="radio"].with-gap:checked+label:after{
+  background-color: #B57F50;
+}
+.input-field #textareaDescripcion:focus+label {
+  color: #B57F50;
+}
+.input-field input[type=number]:focus+label {
+  color: #B57F50;
+}
+.input-field input[type=text]:focus+label {
+  color: #B57F50;
+}
+.input-field input[type=date]:focus+label {
+  color: #B57F50;
+}
+
+/* label underline focus color */
+
+.input-field input[type=text]:focus  {
+    border-bottom: 1px solid #B57F50;
+    box-shadow: 0 1px 0 0 #B57F50;
+}
+
+.input-field input[type=number]:focus  {
+    border-bottom: 1px solid #B57F50;
+    box-shadow: 0 1px 0 0 #B57F50;
+}
+
+.input-field #textareaDescripcion:focus {
+    border-bottom: 1px solid #B57F50;
+    box-shadow: 0 1px 0 0 #B57F50;
+}
+
+.input-field input[type=date]:focus {
+    border-bottom: 1px solid #B57F50;
+    box-shadow: 0 1px 0 0 #B57F50;
+}
+
+/* icon prefix focus color */
+
+.input-field .prefix.active {
+    color: #B57F50;
+}

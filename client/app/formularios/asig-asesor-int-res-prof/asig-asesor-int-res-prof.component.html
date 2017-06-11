@@ -1,0 +1,103 @@
+<div class="row container">
+  <div class="card-panel indigo lighten-5 z-depth-5">
+    <h5 class="center flow-text">Asignación de Asesor Interno para Residencias Profesionales</h5>
+    <div class="row">
+      <div class="input-field col l6 s12">
+        <i class="material-icons prefix">today</i>
+        <input type="date" class="datepicker" [ngModel] ="campoFecha | date:'yyyy-MM-dd'" (ngModelChange)="campoFecha = $event" name="campoFecha">
+      </div>
+      <div class="input-field col l6 s12">
+        <i class="material-icons prefix">reorder</i>
+        <input class="validate" type="text"
+        [(ngModel)]="folio" required>
+        <label for="txtFolio">Folio</label>
+      </div>
+    </div>
+    <form [formGroup]="formulario">
+      <div class="row">
+        <div class="input-field col l6 s12">
+          <i class="material-icons prefix">business</i>
+          <input class="validate" type="text" formControlName="departamento">
+          <label for="departamento">Departamento</label>
+        </div>
+        <div class="input-field col l6 s12">
+          <i class="material-icons prefix">contacts</i>
+          <input class="validate" type="text" formControlName="jefeDepartamento">
+          <label for="txtJefeDepartamento">Jefe del departamento</label>
+        </div>
+        <div class="input-field col l12 s12">
+          <i class="material-icons prefix">person_pin</i>
+          <input class="validate" type="text" formControlName="nomDocente">
+          <label for="txtDocente">Nombre del docente</label>
+        </div>
+        <div class="input-field col l6 s12">
+          <i class="material-icons prefix">person</i>
+          <input class="validate" type="text" formControlName="nomResidente">
+          <label for="txtNombreResidente">Nombre del residente</label>
+        </div>
+        <div class="input-field col l6 s12">
+          <i class="material-icons prefix">local_library</i>
+          <input class="validate" type="text" formControlName="carrera">
+          <label for="txtCarrera">Carrera</label>
+        </div>
+        <div class="input-field col l8 s12">
+          <i class="material-icons prefix">folder_shared</i>
+          <input class="validate" type="text" formControlName="nomProyecto">
+          <label for="txtNombreProyecto">Nombre del proyecto</label>
+        </div>
+        <div class="input-field col l1 s1">
+          <i class="material-icons prefix">playlist_add</i>
+        </div>
+        <div class="input-field col l3 s11">
+          <label for="">Periodo</label><br>
+          <select class="indigo lighten-5 browser-default" formControlName="periodoRealizacion">
+            <option disabled selected>Semestre</option>
+            <option value="Enero-Junio">Enero-Junio</option>
+            <option value="Agosto-Diciembre">Agosto-Diciembre</option>
+          </select>
+        </div>
+        <div class="input-field col l6 s12">
+          <i class="material-icons prefix">equalizer</i>
+          <input class="validate" type="text" formControlName="empresa">
+          <label for="txtEmpresa">Empresa</label>
+        </div>
+      </div>
+      <div class="row hide-on-med-and-down">
+        <div class="input-field right-align col l12">
+          <button (click)="regresarPag()" class="btn waves-effect green darken-4"
+            name="action">
+            Cancelar<i class="material-icons right">reply</i>
+          </button>
+          <button (click)="generarPDF()"
+            class="btn waves-effect green darken-3"
+            type="submit" name="action">Generar PDF
+            <i class="material-icons right">note_add</i>
+          </button>
+        </div>
+      </div>
+      <div class="row hide-on-large-only">
+        <div class="input-field right-align fixed-action-btn horizontal">
+          <a class="btn-floating btn-large green darken-1">
+            <i class="large material-icons">done_all</i>
+          </a>
+          <ul>
+            <li>
+              <button (click)="regresarPag()"
+                class="btn-floating deep-orange lighten-1 yellow darken-1"
+                type="submit" name="action">
+                <i class="material-icons right">reply</i>
+              </button>
+            </li>
+            <li>
+              <button (click)="generarPDF()"
+                class="btn-floating orange darken-1"
+                type="submit" name="action">
+                <i class="material-icons right">note_add</i>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

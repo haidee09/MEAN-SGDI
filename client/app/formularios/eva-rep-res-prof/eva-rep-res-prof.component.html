@@ -1,0 +1,270 @@
+<div class=" container">
+  <div class="card-panel indigo lighten-5 z-depth-5">
+      <h5 class="center flow-text">Evaluación de Reporte de Residencia Profesional</h5>
+    <div class="row">
+      <div class="input-field col l6 s12">
+        <i class="material-icons prefix">reorder</i>
+        <input class="validate" type="text"
+        [(ngModel)]="folio" required>
+        <label for="txtFolio">Folio</label>
+      </div>
+    </div>
+    <form [formGroup]="formulario" class="col s12">
+      <div class="row">
+        <div class="input-field col l7 s12"><i class="material-icons prefix">contacts</i><input formControlName="nombreResidente" class="validate" type="text"><label for="txtNombreAlumno">Nombre del residente</label></div>
+        <div class="input-field col l5 s12"><i class="material-icons prefix">fingerprint</i><input formControlName="numeroControl" class="validate" type="text" maxlength="8"><label for="txtNumControl">Número de control</label></div>
+        <div class="input-field col l7 s12"><i class="material-icons prefix">import_contacts</i><input formControlName="programaEducativo" class="validate" type="text"><label for="txtPrograma">Programa educativo</label></div>
+        <div class="input-field col l1 s1"><i class="material-icons prefix">date_range</i></div>
+        <div class="input-field col l4 s11">
+          <label for="">Periodo de Realización</label><br>
+          <select class="indigo lighten-5 browser-default" formControlName="periodoRealizacion">
+            <option disabled selected>Semestre</option>
+            <option value="Enero-Junio">Enero-Junio</option>
+            <option value="Agosto-Diciembre">Agosto-Diciembre</option>
+          </select>
+        </div>
+        <div class="input-field col s12"><i class="material-icons prefix">create</i><input formControlName="nombreProyecto" class="validate" type="text"><label for="txtNombreProyexto">Nombre del proyecto</label></div>
+        <div class="input-field col l4 s6"><i class="material-icons prefix">bookmark</i><input formControlName="calfParcial" class="validate" type="text"><label for="txtCalificacion">Calificación parcial</label></div>
+      </div>
+        <h6 class="center flow-text">Evaluación por el asesor externo</h6>
+        <div class="row">
+          <div class="col s12 m11 l9 offset-l1 input-field">
+            <table class="responsive-table bordered">
+              <thead>
+                <tr>
+                  <th>Criterios a evaluar</th>
+                  <th>Valor</th>
+                  <th data-field="evaluacion">Evaluación</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td> Portada</td>
+                  <td>2</td>
+                  <td><input formControlName="portadaExterno" class="validate" type="number" min="0" max="2"></td>
+                </tr>
+                <tr>
+                  <td>Agradecimientos</td>
+                  <td>2</td>
+                  <td><input formControlName="agradecimientosExterno" class="validate" type="number" min="0" max="2"></td>
+                </tr>
+                <tr>
+                  <td>Índice</td>
+                  <td>2</td>
+                  <td><input formControlName="indiceExterno" class="validate" type="number" min="0" max="2"></td>
+                </tr>
+                <tr>
+                  <td>Introducción</td>
+                  <td>2</td>
+                  <td><input formControlName="introduccionExterno" class="validate" type="number" min="0" max="2"></td>
+                </tr>
+                <tr>
+                  <td>Problemas a resolver, priorizándolos</td>
+                  <td>5</td>
+                  <td><input formControlName="problematicaExterno" class="validate" type="number" min="0" max="5"></td>
+                </tr>
+                <tr>
+                  <td>Objetivos</td>
+                  <td>5</td>
+                  <td><input formControlName="objetivosExterno" class="validate" type="number" min="0" max="5"></td>
+                </tr>
+                <tr>
+                  <td>Justificación</td>
+                  <td>7</td>
+                  <td><input formControlName="justificacionExterno" class="validate" type="number" min="0" max="7"></td>
+                </tr>
+                <tr>
+                  <td>Marco Teórico (fundamentos teóricos)</td>
+                  <td>10</td>
+                  <td><input formControlName="marcoTeoricoExterno" class="validate" type="number" min="0" max="10"></td>
+                </tr>
+                <tr>
+                  <td>Procedimiento y descripción de las actividades realizadas</td>
+                  <td>5</td>
+                  <td><input formControlName="actividadesRealizadasExterno" class="validate" type="number" min="0" max="5"></td>
+                </tr>
+                <tr>
+                  <td id="filalarga">Resultados, planos, gráficas, prototipos, manuales, programas, análisis estadísticos, modelos matemáticos,
+                    simulaciones, normativas, regulaciones y restricciones, entre otros. Solo para proyectos que por su naturaleza
+                    lo requieran: estudio de mercado, estudio técnico y estudio económico.</td>
+                  <td>45</td>
+                  <td><input formControlName="resultadosExterno" class="validate" type="number" min="0" max="45"></td>
+                </tr>
+                <tr>
+                  <td>Conclusiones, recomendaciones y experiencia profesional adquirida</td>
+                  <td>10</td>
+                  <td><input formControlName="conclusionesExterno" class="validate" type="number" min="0" max="10"></td>
+                </tr>
+                <tr>
+                  <td>Competencias desarrolladas y/o aplicadas</td>
+                  <td>3</td>
+                  <td><input formControlName="competenciasExterno" class="validate" type="number" min="0" max="3"></td>
+                </tr>
+                <tr>
+                  <td>Fuentes de información</td>
+                  <td>2</td>
+                  <td><input formControlName="fuentesExterno" class="validate" type="number" min="0" max="2"></td>
+                </tr>
+                <tr>
+                  <td id="textoDerecha">Calificación total</td>
+                  <td>100</td>
+                  <td><input disabled class="validate" type="number" min="0" max="100"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="input-field col l12 s12"><i class="material-icons prefix">search</i><textarea formControlName="observacionesExterno" class="materialize-textarea" id="textarea1"></textarea>
+          <label for="textarea1">Observaciones</label>
+        </div>
+    </form>
+    <div class="row">
+      <div class="input-field col l6 s12">
+        <i class="material-icons prefix">today</i>
+        <input type="date" class="datepicker" [ngModel] ="campoFecha | date:'yyyy-MM-dd'" (ngModelChange)="campoFecha = $event" name="campoFecha">
+      </div>
+      <div class="input-field col l6 s12">
+        <i class="material-icons prefix">person</i>
+        <input class="validate" type="text" [(ngModel)]="asesorExterno">
+        <label for="AsesorExterno">Nombre del asesor externo</label>
+      </div>
+    </div>
+    <h6 class="center flow-text">Evaluación por el asesor interno</h6>
+    <form [formGroup]="formulario2" class="col s12">
+      <div class="row">
+          <div class="col s12 m11 l9 offset-l1">
+            <table class="responsive-table bordered">
+              <thead>
+                <tr>
+                  <th>Criterios a evaluar</th>
+                  <th>Valor</th>
+                  <th data-field="evaluacion2">Evaluación</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td> Portada</td>
+                  <td>2</td>
+                  <td><input formControlName="portadaInterno" class="validate" type="number" min="0" max="2"></td>
+                </tr>
+                <tr>
+                  <td>Agradecimientos</td>
+                  <td>2</td>
+                  <td><input formControlName="agradecimientosInterno" class="validate" type="number" min="0" max="2"></td>
+                </tr>
+                <tr>
+                  <td>Índice</td>
+                  <td>2</td>
+                  <td><input formControlName="indiceInterno" class="validate" type="number" min="0" max="2"></td>
+                </tr>
+                <tr>
+                  <td>Introducción</td>
+                  <td>2</td>
+                  <td><input formControlName="introduccionInterno" class="validate" type="number" min="0" max="2"></td>
+                </tr>
+                <tr>
+                  <td>Problemas a resolver, priorizándolos</td>
+                  <td>5</td>
+                  <td><input formControlName="problematicaInterno" class="validate" type="number" min="0" max="5"></td>
+                </tr>
+                <tr>
+                  <td>Objetivos</td>
+                  <td>5</td>
+                  <td><input formControlName="objetivosInterno" class="validate" type="number" min="0" max="5"></td>
+                </tr>
+                <tr>
+                  <td>Justificación</td>
+                  <td>7</td>
+                  <td><input formControlName="justificacionInterno" class="validate" type="number" min="0" max="7"></td>
+                </tr>
+                <tr>
+                  <td>Marco Teórico (fundamentos teóricos)</td>
+                  <td>10</td>
+                  <td><input formControlName="marcoTeoricoInterno" class="validate" type="number" min="0" max="10"></td>
+                </tr>
+                <tr>
+                  <td>Procedimiento y descripción de las actividades realizadas</td>
+                  <td>5</td>
+                  <td><input formControlName="actividadesRealizadasInterno" class="validate" type="number" min="0" max="5"></td>
+                </tr>
+                <tr>
+                  <td id="filalarga">Resultados, planos, gráficas, prototipos, manuales, programas, análisis estadísticos, modelos matemáticos,
+                    simulaciones, normativas, regulaciones y restricciones, entre otros. Solo para proyectos que por su naturaleza
+                    lo requieran: estudio de mercado, estudio técnico y estudio económico.</td>
+                  <td>45</td>
+                  <td><input formControlName="resultadosInterno" class="validate" type="number" min="0" max="45"></td>
+                </tr>
+                <tr>
+                  <td>Conclusiones, recomendaciones y experiencia profesional adquirida</td>
+                  <td>10</td>
+                  <td><input formControlName="conclusionesInterno" class="validate" type="number" min="0" max="10"></td>
+                </tr>
+                <tr>
+                  <td>Competencias desarrolladas y/o aplicadas</td>
+                  <td>3</td>
+                  <td><input formControlName="competenciasInterno" class="validate" type="number" min="0" max="3"></td>
+                </tr>
+                <tr>
+                  <td>Fuentes de información</td>
+                  <td>2</td>
+                  <td><input formControlName="fuentesInterno" class="validate" type="number" min="0" max="2"></td>
+                </tr>
+                <tr>
+                  <td id="textoDerecha">Calificación total</td>
+                  <td>100</td>
+                  <td><input disabled class="validate" type="number" min="0" max="100"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+      </div>
+      <div class="input-field col l12 s12"><i class="material-icons prefix">search</i><textarea formControlName="observacionesInterno" class="materialize-textarea" id="textarea2"></textarea>
+        <label for="textarea2">Observaciones</label>
+      </div>
+    </form>
+    <div class="row">
+      <div class="input-field col l6 s12">
+        <i class="material-icons prefix">today</i>
+        <input type="date" class="datepicker" [ngModel] ="campoFecha2 | date:'yyyy-MM-dd'" (ngModelChange)="campoFecha2 = $event" name="campoFecha2">
+      </div>
+      <div class="input-field col l6 s12">
+        <i class="material-icons prefix">person</i>
+        <input class="validate" type="text" [(ngModel)]="asesorInterno">
+        <label for="asesorInterno">Nombre del asesor interno</label>
+      </div>
+    </div>
+    <div class="row hide-on-med-and-down">
+      <div class="input-field right-align col l12">
+        <button (click)="regresarPag()" class="btn waves-effect green darken-4"
+          name="action">
+          Cancelar<i class="material-icons right">reply</i>
+        </button>
+        <button (click)="generarPDF()"
+          class="btn waves-effect green darken-3"
+          type="submit" name="action">Generar PDF
+          <i class="material-icons right">note_add</i>
+        </button>
+      </div>
+    </div>
+    <div class="row hide-on-large-only">
+      <div class="input-field right-align fixed-action-btn horizontal"><a class="btn-floating btn-large green darken-1"><i class="large material-icons">done_all</i></a>
+        <ul>
+          <li>
+            <button (click)="regresarPag()"
+              class="btn-floating deep-orange lighten-1 yellow darken-1"
+              type="submit" name="action">
+              <i class="material-icons right">reply</i>
+            </button>
+          </li>
+          <li>
+            <button (click)="generarPDF()"
+              class="btn-floating orange darken-1"
+              type="submit" name="action">
+              <i class="material-icons right">note_add</i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

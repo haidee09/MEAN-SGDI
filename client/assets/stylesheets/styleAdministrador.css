@@ -1,0 +1,12 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+a {
+  text-decoration: none;
+}
+#h1 {
+  padding-top: 20px;
+}
+blockquote{
+  border-left: 5px solid #004d40;
+}

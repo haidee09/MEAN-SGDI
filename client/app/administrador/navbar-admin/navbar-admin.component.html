@@ -1,0 +1,39 @@
+<div class="green darken-2 col s12">
+  <div class="row">
+    <nav class="green darken-2 col l12">
+      <div class="nav-wrapper container">
+        <a class="brand-logo" href="#"><h4>Administrador</h4></a>
+        <ul class="right hide-on-med-and-down" id="nav-mobile">
+          <li>
+            <a routerLink="/administrador/inicio" routerLinkActive="active-link">Inicio
+              <i class="material-icons left">home</i></a>
+          </li>
+          <li>
+            <a class="dropdown-button" routerLink="/administrador/listaDocumentos" routerLinkActive="active-link">
+              Generar Documentos
+            <i class="material-icons left"> mode_edit</i></a>
+          </li>
+          <li>
+            <a (click)="cerrarSesion()">Cerrar Sesión
+            <i class="material-icons left"> lock</i></a>
+          </li>
+        </ul>
+        <ul class="side-nav lime lighten-4" id="mobile-demo">
+          <li class="active">
+            <a class="waves-effect" routerLink="/administrador/inicio" routerLinkActive="active-link">Inicio
+            <i class="material-icons left">home</i></a></li>
+          <li>
+          <a class="waves-effect" routerLink="/administrador/listaDocumentos" routerLinkActive="active-link">Generar Documentos
+          <i class="material-icons left"> mode_edit</i></a></li>
+          <li>
+            <a class="waves-effect" (click)="cerrarSesion()">Cerrar Sesión
+              <i class="material-icons left"> lock</i></a>
+          </li>
+        </ul>
+          <a class="button-collapse" href="#" data-activates="mobile-demo">
+            <i class="material-icons">menu</i>
+          </a>
+      </div>
+    </nav>
+  </div>
+</div>
